@@ -249,7 +249,7 @@ Partial Class FrmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 463)
+        Me.ClientSize = New System.Drawing.Size(883, 438)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Txtimpuesto)
         Me.Controls.Add(Me.IMPUESTO)
