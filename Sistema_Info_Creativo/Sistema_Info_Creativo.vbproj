@@ -91,6 +91,18 @@
     <Compile Include="FrmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLOGIN1.Designer.vb">
+      <DependentUpon>FrmLOGIN1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLOGIN1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmREGISTROUsuario.Designer.vb">
+      <DependentUpon>FrmREGISTROUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmREGISTROUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVentas.Designer.vb">
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
@@ -123,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLOGIN1.resx">
+      <DependentUpon>FrmLOGIN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmREGISTROUsuario.resx">
+      <DependentUpon>FrmREGISTROUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>
@@ -157,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGOTIPO INFO CREATIVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-06-17 at 7.59.24 PM.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

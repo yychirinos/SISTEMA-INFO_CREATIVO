@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property descarga__6_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("descarga (6)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property LOGOTIPO_INFO_CREATIVE() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("LOGOTIPO INFO CREATIVE", resourceCulture)
@@ -96,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property WhatsApp_Image_2023_06_17_at_4_15_39_PM() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("WhatsApp Image 2023-06-17 at 4.15.39 PM", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WhatsApp_Image_2023_06_17_at_7_59_24_PM() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WhatsApp Image 2023-06-17 at 7.59.24 PM", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
