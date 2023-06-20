@@ -11,7 +11,7 @@
     <AssemblyName>Sistema_Info_Creativo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -97,12 +97,6 @@
     <Compile Include="FrmLOGIN1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmREGISTROUsuario.Designer.vb">
-      <DependentUpon>FrmREGISTROUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmREGISTROUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmVentas.Designer.vb">
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
@@ -138,9 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLOGIN1.resx">
       <DependentUpon>FrmLOGIN1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmREGISTROUsuario.resx">
-      <DependentUpon>FrmREGISTROUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>
@@ -181,6 +172,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2023-06-17 at 7.59.24 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actalizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7c97471a1ecff173e7f241c9110ad029.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
