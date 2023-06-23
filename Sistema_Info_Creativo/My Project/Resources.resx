@@ -118,31 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WhatsApp Image 2023-06-17 at 7.59.24 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2023-06-17 at 7.59.24 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhatsApp Image 2023-06-17 at 4.15.39 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2023-06-17 at 4.15.39 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="327527" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\327527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhatsApp Image 2023-06-17 at 4.15.39 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2023-06-17 at 4.15.39 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5882911" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5882911.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3221897" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3221897.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (6).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5c790123003fa702a1d2795b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5c790123003fa702a1d2795b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actalizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actalizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1001008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1001008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52-521721_close-cross-sign-in-a-square-button-comments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52-521721_close-cross-sign-in-a-square-button-comments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7c97471a1ecff173e7f241c9110ad029" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7c97471a1ecff173e7f241c9110ad029.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2023-06-17 at 7.59.24 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2023-06-17 at 7.59.24 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-scalable-vector-graphics-apple-icon-edit-png-icon-blue-pencil-5ab065d3a79673.8929716715215098436865.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGOTIPO INFO CREATIVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOTIPO INFO CREATIVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7c97471a1ecff173e7f241c9110ad029" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7c97471a1ecff173e7f241c9110ad029.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5c790123003fa702a1d2795b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5c790123003fa702a1d2795b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actalizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actalizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descarga (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (6).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e9879a1565935453499d015faae62da8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e9879a1565935453499d015faae62da8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
