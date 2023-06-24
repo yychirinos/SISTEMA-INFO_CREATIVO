@@ -141,10 +141,11 @@ Public Class FrmEmpleados
         cmd.CommandType = CommandType.Text
         cmd.Parameters.AddWithValue("@numempleado", txtNumEmpleado.Text)
 
-        cmd.ExecuteNonQuery()
-        MessageBox.Show("Usuario eliminado correctamente")
-        limpiarcontroles()
-
+        If MsgBox("Esta seguro de que quiere eliminar este empleado?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Empleado eliminado correctamente")
+            limpiarcontroles()
+        End If
     End Sub
 
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
