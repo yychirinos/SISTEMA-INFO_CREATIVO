@@ -132,10 +132,11 @@ Public Class FrmClientes
         cmd.CommandType = CommandType.Text
         cmd.Parameters.AddWithValue("@codcliente", txtCodCliente.Text)
 
-        cmd.ExecuteNonQuery()
-        MessageBox.Show("Cliente eliminado correctamente")
-        limpiarcontroles()
-
+        If MsgBox("Esta seguro de que quiere eliminar este cliente?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Cliente eliminado correctamente")
+            limpiarcontroles()
+        End If
     End Sub
     Private Sub btncancelar_Click(sender As Object, e As EventArgs) Handles btncancelar.Click
         limpiarcontroles()
