@@ -49,6 +49,7 @@ Partial Class FrmClientes
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.DataGridClientes = New System.Windows.Forms.DataGridView()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -59,6 +60,7 @@ Partial Class FrmClientes
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Location = New System.Drawing.Point(3, 1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -72,7 +74,7 @@ Partial Class FrmClientes
         Me.PictureBox3.Location = New System.Drawing.Point(1121, 1)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(74, 63)
+        Me.PictureBox3.Size = New System.Drawing.Size(87, 78)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 24
         Me.PictureBox3.TabStop = False
@@ -335,6 +337,17 @@ Partial Class FrmClientes
         Me.DataGridClientes.Size = New System.Drawing.Size(1092, 250)
         Me.DataGridClientes.TabIndex = 17
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(466, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(243, 51)
+        Me.Label4.TabIndex = 25
+        Me.Label4.Text = "CLIENTES"
+        '
         'FrmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -348,6 +361,7 @@ Partial Class FrmClientes
         Me.Name = "FrmClientes"
         Me.Text = "FrmClientes"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -383,4 +397,5 @@ Partial Class FrmClientes
     Friend WithEvents btnguardar As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents DataGridClientes As DataGridView
+    Friend WithEvents Label4 As Label
 End Class
