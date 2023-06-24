@@ -216,5 +216,8 @@
   <ItemGroup>
     <None Include="Resources\e9879a1565935453499d015faae62da8.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO INFO CREATIVE1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
