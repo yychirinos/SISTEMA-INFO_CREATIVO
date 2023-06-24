@@ -69,10 +69,10 @@ Partial Class FrmClientes
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE1
-        Me.PictureBox3.Location = New System.Drawing.Point(1135, 10)
+        Me.PictureBox3.Location = New System.Drawing.Point(1121, 1)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(60, 45)
+        Me.PictureBox3.Size = New System.Drawing.Size(74, 63)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 24
         Me.PictureBox3.TabStop = False

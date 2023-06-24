@@ -150,7 +150,7 @@ Public Class FrmClientes
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente, Nombres, apellidos,dni, telefono, Correo, direccion as Nivel from Clientes
+            da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion from Clientes
 ", con)
             da.Fill(dt)
             DataGridClientes.DataSource = dt
