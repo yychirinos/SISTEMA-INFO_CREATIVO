@@ -44,7 +44,7 @@ Partial Class FrmLOGIN1
         Me.Label1.Location = New System.Drawing.Point(101, 182)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 16)
+        Me.Label1.Size = New System.Drawing.Size(84, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "USUARIO"
         '
@@ -56,7 +56,7 @@ Partial Class FrmLOGIN1
         Me.Label2.Location = New System.Drawing.Point(101, 250)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 16)
+        Me.Label2.Size = New System.Drawing.Size(108, 22)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "CONTRASEÑA"
         '
@@ -65,7 +65,7 @@ Partial Class FrmLOGIN1
         Me.txtusuario.Location = New System.Drawing.Point(218, 208)
         Me.txtusuario.Margin = New System.Windows.Forms.Padding(2)
         Me.txtusuario.Name = "txtusuario"
-        Me.txtusuario.Size = New System.Drawing.Size(107, 20)
+        Me.txtusuario.Size = New System.Drawing.Size(107, 23)
         Me.txtusuario.TabIndex = 2
         '
         'txtcontrasena
@@ -73,7 +73,7 @@ Partial Class FrmLOGIN1
         Me.txtcontrasena.Location = New System.Drawing.Point(218, 279)
         Me.txtcontrasena.Margin = New System.Windows.Forms.Padding(2)
         Me.txtcontrasena.Name = "txtcontrasena"
-        Me.txtcontrasena.Size = New System.Drawing.Size(107, 20)
+        Me.txtcontrasena.Size = New System.Drawing.Size(107, 23)
         Me.txtcontrasena.TabIndex = 3
         '
         'Btningresar
@@ -82,7 +82,7 @@ Partial Class FrmLOGIN1
         Me.Btningresar.Location = New System.Drawing.Point(97, 328)
         Me.Btningresar.Margin = New System.Windows.Forms.Padding(2)
         Me.Btningresar.Name = "Btningresar"
-        Me.Btningresar.Size = New System.Drawing.Size(101, 19)
+        Me.Btningresar.Size = New System.Drawing.Size(101, 29)
         Me.Btningresar.TabIndex = 4
         Me.Btningresar.Text = "INGRESAR"
         Me.Btningresar.UseVisualStyleBackColor = False
@@ -93,7 +93,7 @@ Partial Class FrmLOGIN1
         Me.Btncancelar.Location = New System.Drawing.Point(260, 328)
         Me.Btncancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.Btncancelar.Name = "Btncancelar"
-        Me.Btncancelar.Size = New System.Drawing.Size(97, 19)
+        Me.Btncancelar.Size = New System.Drawing.Size(97, 29)
         Me.Btncancelar.TabIndex = 5
         Me.Btncancelar.Text = "CANCELAR"
         Me.Btncancelar.UseVisualStyleBackColor = False
@@ -134,11 +134,11 @@ Partial Class FrmLOGIN1
         '
         'FrmLOGIN1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.e9879a1565935453499d015faae62da8
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(442, 354)
+        Me.ClientSize = New System.Drawing.Size(442, 379)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)

@@ -23,6 +23,8 @@ Partial Class FrmEmpleados
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.cmbsexo = New System.Windows.Forms.ComboBox()
         Me.dtpfechanac = New System.Windows.Forms.DateTimePicker()
         Me.txtapellidos = New System.Windows.Forms.TextBox()
@@ -57,18 +59,16 @@ Partial Class FrmEmpleados
         Me.Cancelar = New System.Windows.Forms.Button()
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.eliminar = New System.Windows.Forms.Button()
+        Me.btnsalir = New System.Windows.Forms.Button()
+        Me.btncancelar = New System.Windows.Forms.Button()
+        Me.actualizar = New System.Windows.Forms.Button()
+        Me.guardar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,6 +95,27 @@ Partial Class FrmEmpleados
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion Principal."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._327527
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 43)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(115, 135)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
+        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
+        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnbuscar.Location = New System.Drawing.Point(275, 28)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
+        Me.btnbuscar.TabIndex = 12
+        Me.btnbuscar.UseVisualStyleBackColor = False
         '
         'cmbsexo
         '
@@ -406,88 +427,67 @@ Partial Class FrmEmpleados
         Me.btnguardar.Text = "Guardar"
         Me.btnguardar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._327527
-        Me.PictureBox1.Location = New System.Drawing.Point(500, 43)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 135)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
-        'btnbuscar
-        '
-        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
-        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
-        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnbuscar.Location = New System.Drawing.Point(275, 28)
-        Me.btnbuscar.Name = "btnbuscar"
-        Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
-        Me.btnbuscar.TabIndex = 12
-        Me.btnbuscar.UseVisualStyleBackColor = False
-        '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Controls.Add(Me.Button3)
-        Me.Panel3.Controls.Add(Me.Button4)
-        Me.Panel3.Controls.Add(Me.Button6)
-        Me.Panel3.Controls.Add(Me.Button7)
+        Me.Panel3.Controls.Add(Me.eliminar)
+        Me.Panel3.Controls.Add(Me.btnsalir)
+        Me.Panel3.Controls.Add(Me.btncancelar)
+        Me.Panel3.Controls.Add(Me.actualizar)
+        Me.Panel3.Controls.Add(Me.guardar)
         Me.Panel3.Location = New System.Drawing.Point(82, 639)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(722, 70)
         Me.Panel3.TabIndex = 4
         '
-        'Button2
+        'eliminar
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(285, 13)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(118, 39)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.eliminar.Location = New System.Drawing.Point(285, 13)
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.Size = New System.Drawing.Size(118, 39)
+        Me.eliminar.TabIndex = 5
+        Me.eliminar.Text = "Eliminar"
+        Me.eliminar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnsalir
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(609, 13)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(98, 39)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Salir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnsalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsalir.Location = New System.Drawing.Point(609, 13)
+        Me.btnsalir.Name = "btnsalir"
+        Me.btnsalir.Size = New System.Drawing.Size(98, 39)
+        Me.btnsalir.TabIndex = 4
+        Me.btnsalir.Text = "Salir"
+        Me.btnsalir.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btncancelar
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(419, 13)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(111, 39)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Cancelar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btncancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncancelar.Location = New System.Drawing.Point(419, 13)
+        Me.btncancelar.Name = "btncancelar"
+        Me.btncancelar.Size = New System.Drawing.Size(111, 39)
+        Me.btncancelar.TabIndex = 3
+        Me.btncancelar.Text = "Cancelar"
+        Me.btncancelar.UseVisualStyleBackColor = True
         '
-        'Button6
+        'actualizar
         '
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(139, 13)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(130, 39)
-        Me.Button6.TabIndex = 1
-        Me.Button6.Text = "Actualizar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.actualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.actualizar.Location = New System.Drawing.Point(139, 13)
+        Me.actualizar.Name = "actualizar"
+        Me.actualizar.Size = New System.Drawing.Size(130, 39)
+        Me.actualizar.TabIndex = 1
+        Me.actualizar.Text = "Actualizar"
+        Me.actualizar.UseVisualStyleBackColor = True
         '
-        'Button7
+        'guardar
         '
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(17, 13)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(106, 39)
-        Me.Button7.TabIndex = 0
-        Me.Button7.Text = "Guardar"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.guardar.Location = New System.Drawing.Point(17, 13)
+        Me.guardar.Name = "guardar"
+        Me.guardar.Size = New System.Drawing.Size(106, 39)
+        Me.guardar.TabIndex = 0
+        Me.guardar.Text = "Guardar"
+        Me.guardar.UseVisualStyleBackColor = True
         '
         'FrmEmpleados
         '
@@ -503,10 +503,10 @@ Partial Class FrmEmpleados
         Me.Text = "FrmEmpleados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -550,9 +550,9 @@ Partial Class FrmEmpleados
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents eliminar As Button
+    Friend WithEvents btnsalir As Button
+    Friend WithEvents btncancelar As Button
+    Friend WithEvents actualizar As Button
+    Friend WithEvents guardar As Button
 End Class
