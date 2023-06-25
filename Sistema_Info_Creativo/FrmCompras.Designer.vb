@@ -24,6 +24,7 @@ Partial Class FrmCompras
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidcompra = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,21 +45,20 @@ Partial Class FrmCompras
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.datagridcompras = New System.Windows.Forms.DataGridView()
         Me.btnbuscar = New System.Windows.Forms.Button()
         Me.btneliminar = New System.Windows.Forms.Button()
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.btnregistrar = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.datagridcompras = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -81,6 +81,18 @@ Partial Class FrmCompras
         Me.Label10.Size = New System.Drawing.Size(131, 23)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "REGISTRAR COMPRA"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.WhatsApp_Image_2023_06_17_at_7_59_24_PM
+        Me.PictureBox3.Location = New System.Drawing.Point(716, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(111, 54)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 23
+        Me.PictureBox3.TabStop = False
         '
         'Label1
         '
@@ -132,7 +144,7 @@ Partial Class FrmCompras
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(7, 60)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(828, 194)
+        Me.GroupBox1.Size = New System.Drawing.Size(826, 194)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         '
@@ -159,14 +171,14 @@ Partial Class FrmCompras
         '
         'txtprecioarticulo
         '
-        Me.txtprecioarticulo.Location = New System.Drawing.Point(422, 62)
+        Me.txtprecioarticulo.Location = New System.Drawing.Point(431, 62)
         Me.txtprecioarticulo.Name = "txtprecioarticulo"
         Me.txtprecioarticulo.Size = New System.Drawing.Size(114, 20)
         Me.txtprecioarticulo.TabIndex = 12
         '
         'txtarticulo
         '
-        Me.txtarticulo.Location = New System.Drawing.Point(422, 22)
+        Me.txtarticulo.Location = New System.Drawing.Point(431, 25)
         Me.txtarticulo.Name = "txtarticulo"
         Me.txtarticulo.Size = New System.Drawing.Size(144, 20)
         Me.txtarticulo.TabIndex = 19
@@ -279,15 +291,6 @@ Partial Class FrmCompras
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opciones"
         '
-        'datagridcompras
-        '
-        Me.datagridcompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridcompras.Location = New System.Drawing.Point(0, 371)
-        Me.datagridcompras.Name = "datagridcompras"
-        Me.datagridcompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datagridcompras.Size = New System.Drawing.Size(835, 127)
-        Me.datagridcompras.TabIndex = 12
-        '
         'btnbuscar
         '
         Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.vector_find_icon
@@ -348,24 +351,21 @@ Partial Class FrmCompras
         Me.PictureBox6.TabIndex = 15
         Me.PictureBox6.TabStop = False
         '
-        'PictureBox3
+        'datagridcompras
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
-        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.WhatsApp_Image_2023_06_17_at_7_59_24_PM
-        Me.PictureBox3.Location = New System.Drawing.Point(716, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(111, 54)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 23
-        Me.PictureBox3.TabStop = False
+        Me.datagridcompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridcompras.Location = New System.Drawing.Point(0, 371)
+        Me.datagridcompras.Name = "datagridcompras"
+        Me.datagridcompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.datagridcompras.Size = New System.Drawing.Size(835, 127)
+        Me.datagridcompras.TabIndex = 12
         '
         'FrmCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(845, 498)
+        Me.ClientSize = New System.Drawing.Size(843, 498)
         Me.Controls.Add(Me.datagridcompras)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -373,13 +373,13 @@ Partial Class FrmCompras
         Me.Name = "FrmCompras"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
