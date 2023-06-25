@@ -160,4 +160,12 @@ Public Class FrmClientes
 
         End Try
     End Sub
+
+    Private Sub DataGridClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridClientes.CellContentClick
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

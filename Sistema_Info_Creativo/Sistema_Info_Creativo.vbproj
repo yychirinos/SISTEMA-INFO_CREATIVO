@@ -11,7 +11,7 @@
     <AssemblyName>Sistema_Info_Creativo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -218,6 +218,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGOTIPO INFO CREATIVE1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actalizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32218971.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-find-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-user-profile-symbol-register-button-miscellaneous-blue-logo-thumbnail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

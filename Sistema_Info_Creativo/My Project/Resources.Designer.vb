@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -76,6 +76,16 @@ Namespace My.Resources
         Friend ReadOnly Property _3221897() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("3221897", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _32218971() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("32218971", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -153,6 +163,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Actalizar1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Actalizar1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property descarga__6_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("descarga (6)", resourceCulture)
@@ -176,6 +196,16 @@ Namespace My.Resources
         Friend ReadOnly Property guardar() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("guardar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property guardar1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("guardar1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -234,6 +264,17 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property png_transparent_computer_icons_user_profile_symbol_register_button_miscellaneous_blue_logo_thumbnail() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("png-transparent-computer-icons-user-profile-symbol-register-button-miscellaneous-"& _ 
+                        "blue-logo-thumbnail", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property user_profile_icon_in_flat_style_member_avatar_illustration_on_isolated_background_human_permission_sign_business_concept_vector() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background"& _ 
@@ -249,6 +290,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background"& _ 
                         "-human-permission-sign-business-concept-vector1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property vector_find_icon() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("vector-find-icon", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

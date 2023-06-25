@@ -24,19 +24,18 @@ Partial Class FrmCompras
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtidcompra = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txttotal = New System.Windows.Forms.TextBox()
+        Me.dtpfecha = New System.Windows.Forms.DateTimePicker()
+        Me.txtcantidadarticulo = New System.Windows.Forms.TextBox()
+        Me.txtprecioarticulo = New System.Windows.Forms.TextBox()
+        Me.txtarticulo = New System.Windows.Forms.TextBox()
+        Me.txtidarticulo = New System.Windows.Forms.TextBox()
+        Me.txtidproveedor = New System.Windows.Forms.TextBox()
+        Me.txtidempleado = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -44,32 +43,22 @@ Partial Class FrmCompras
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Id_Compra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Id_Empleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Id_Proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewLinkColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewLinkColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.datagridcompras = New System.Windows.Forms.DataGridView()
+        Me.btnbuscar = New System.Windows.Forms.Button()
+        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.btnactualizar = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.btnregistrar = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -80,7 +69,7 @@ Partial Class FrmCompras
         Me.Panel1.Location = New System.Drawing.Point(0, 1)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(740, 54)
+        Me.Panel1.Size = New System.Drawing.Size(827, 54)
         Me.Panel1.TabIndex = 4
         '
         'Label10
@@ -93,17 +82,6 @@ Partial Class FrmCompras
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "REGISTRAR COMPRA"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.WhatsApp_Image_2023_06_17_at_7_59_24_PM
-        Me.PictureBox3.Location = New System.Drawing.Point(633, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(116, 66)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 23
-        Me.PictureBox3.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -114,12 +92,12 @@ Partial Class FrmCompras
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Id_Compra"
         '
-        'TextBox1
+        'txtidcompra
         '
-        Me.TextBox1.Location = New System.Drawing.Point(122, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.txtidcompra.Location = New System.Drawing.Point(122, 25)
+        Me.txtidcompra.Name = "txtidcompra"
+        Me.txtidcompra.Size = New System.Drawing.Size(100, 20)
+        Me.txtidcompra.TabIndex = 6
         '
         'Label2
         '
@@ -134,14 +112,14 @@ Partial Class FrmCompras
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txttotal)
+        Me.GroupBox1.Controls.Add(Me.dtpfecha)
+        Me.GroupBox1.Controls.Add(Me.txtcantidadarticulo)
+        Me.GroupBox1.Controls.Add(Me.txtprecioarticulo)
+        Me.GroupBox1.Controls.Add(Me.txtarticulo)
+        Me.GroupBox1.Controls.Add(Me.txtidarticulo)
+        Me.GroupBox1.Controls.Add(Me.txtidproveedor)
+        Me.GroupBox1.Controls.Add(Me.txtidempleado)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -150,69 +128,69 @@ Partial Class FrmCompras
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtidcompra)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 51)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 60)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(740, 239)
+        Me.GroupBox1.Size = New System.Drawing.Size(828, 194)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         '
-        'TextBox8
+        'txttotal
         '
-        Me.TextBox8.Location = New System.Drawing.Point(422, 137)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(113, 20)
-        Me.TextBox8.TabIndex = 22
+        Me.txttotal.Location = New System.Drawing.Point(431, 130)
+        Me.txttotal.Name = "txttotal"
+        Me.txttotal.Size = New System.Drawing.Size(113, 20)
+        Me.txttotal.TabIndex = 22
         '
-        'DateTimePicker1
+        'dtpfecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 183)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(150, 20)
-        Me.DateTimePicker1.TabIndex = 21
+        Me.dtpfecha.Location = New System.Drawing.Point(122, 173)
+        Me.dtpfecha.Name = "dtpfecha"
+        Me.dtpfecha.Size = New System.Drawing.Size(150, 20)
+        Me.dtpfecha.TabIndex = 21
         '
-        'TextBox7
+        'txtcantidadarticulo
         '
-        Me.TextBox7.Location = New System.Drawing.Point(422, 103)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(105, 20)
-        Me.TextBox7.TabIndex = 20
+        Me.txtcantidadarticulo.Location = New System.Drawing.Point(431, 96)
+        Me.txtcantidadarticulo.Name = "txtcantidadarticulo"
+        Me.txtcantidadarticulo.Size = New System.Drawing.Size(105, 20)
+        Me.txtcantidadarticulo.TabIndex = 20
         '
-        'TextBox5
+        'txtprecioarticulo
         '
-        Me.TextBox5.Location = New System.Drawing.Point(422, 62)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(105, 20)
-        Me.TextBox5.TabIndex = 12
+        Me.txtprecioarticulo.Location = New System.Drawing.Point(422, 62)
+        Me.txtprecioarticulo.Name = "txtprecioarticulo"
+        Me.txtprecioarticulo.Size = New System.Drawing.Size(114, 20)
+        Me.txtprecioarticulo.TabIndex = 12
         '
-        'TextBox6
+        'txtarticulo
         '
-        Me.TextBox6.Location = New System.Drawing.Point(422, 22)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(144, 20)
-        Me.TextBox6.TabIndex = 19
+        Me.txtarticulo.Location = New System.Drawing.Point(422, 22)
+        Me.txtarticulo.Name = "txtarticulo"
+        Me.txtarticulo.Size = New System.Drawing.Size(144, 20)
+        Me.txtarticulo.TabIndex = 19
         '
-        'TextBox4
+        'txtidarticulo
         '
-        Me.TextBox4.Location = New System.Drawing.Point(122, 134)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 18
+        Me.txtidarticulo.Location = New System.Drawing.Point(122, 134)
+        Me.txtidarticulo.Name = "txtidarticulo"
+        Me.txtidarticulo.Size = New System.Drawing.Size(100, 20)
+        Me.txtidarticulo.TabIndex = 18
         '
-        'TextBox3
+        'txtidproveedor
         '
-        Me.TextBox3.Location = New System.Drawing.Point(122, 96)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 17
+        Me.txtidproveedor.Location = New System.Drawing.Point(122, 96)
+        Me.txtidproveedor.Name = "txtidproveedor"
+        Me.txtidproveedor.Size = New System.Drawing.Size(100, 20)
+        Me.txtidproveedor.TabIndex = 17
         '
-        'TextBox2
+        'txtidempleado
         '
-        Me.TextBox2.Location = New System.Drawing.Point(122, 58)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 16
+        Me.txtidempleado.Location = New System.Drawing.Point(122, 58)
+        Me.txtidempleado.Name = "txtidempleado"
+        Me.txtidempleado.Size = New System.Drawing.Size(100, 20)
+        Me.txtidempleado.TabIndex = 16
         '
         'Label9
         '
@@ -228,7 +206,7 @@ Partial Class FrmCompras
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(33, 183)
+        Me.Label8.Location = New System.Drawing.Point(37, 173)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 13)
         Me.Label8.TabIndex = 14
@@ -284,168 +262,131 @@ Partial Class FrmCompras
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Id_Articulo"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id_Compra, Me.Id_Empleado, Me.Id_Proveedor, Me.Articulo, Me.Precio, Me.Cantidad, Me.Total})
-        Me.DataGridView1.Location = New System.Drawing.Point(7, 383)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(733, 103)
-        Me.DataGridView1.TabIndex = 10
-        '
-        'Id_Compra
-        '
-        Me.Id_Compra.Frozen = True
-        Me.Id_Compra.HeaderText = "Id_Compra"
-        Me.Id_Compra.MinimumWidth = 10
-        Me.Id_Compra.Name = "Id_Compra"
-        '
-        'Id_Empleado
-        '
-        Me.Id_Empleado.Frozen = True
-        Me.Id_Empleado.HeaderText = "Id_Empleado"
-        Me.Id_Empleado.Name = "Id_Empleado"
-        '
-        'Id_Proveedor
-        '
-        Me.Id_Proveedor.Frozen = True
-        Me.Id_Proveedor.HeaderText = "Id_Proveedor"
-        Me.Id_Proveedor.Name = "Id_Proveedor"
-        '
-        'Articulo
-        '
-        Me.Articulo.Frozen = True
-        Me.Articulo.HeaderText = "Articulo"
-        Me.Articulo.Name = "Articulo"
-        '
-        'Precio
-        '
-        Me.Precio.Frozen = True
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        '
-        'Cantidad
-        '
-        Me.Cantidad.Frozen = True
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        '
-        'Total
-        '
-        Me.Total.Frozen = True
-        Me.Total.HeaderText = "Total"
-        Me.Total.Name = "Total"
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.btnbuscar)
+        Me.GroupBox2.Controls.Add(Me.btneliminar)
+        Me.GroupBox2.Controls.Add(Me.btnactualizar)
         Me.GroupBox2.Controls.Add(Me.PictureBox7)
+        Me.GroupBox2.Controls.Add(Me.btnregistrar)
         Me.GroupBox2.Controls.Add(Me.PictureBox6)
-        Me.GroupBox2.Controls.Add(Me.PictureBox5)
-        Me.GroupBox2.Controls.Add(Me.PictureBox4)
-        Me.GroupBox2.Controls.Add(Me.PictureBox1)
-        Me.GroupBox2.Controls.Add(Me.PictureBox2)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(278, 296)
+        Me.GroupBox2.Location = New System.Drawing.Point(342, 284)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(462, 81)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opciones"
         '
+        'datagridcompras
+        '
+        Me.datagridcompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridcompras.Location = New System.Drawing.Point(0, 371)
+        Me.datagridcompras.Name = "datagridcompras"
+        Me.datagridcompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.datagridcompras.Size = New System.Drawing.Size(835, 127)
+        Me.datagridcompras.TabIndex = 12
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.vector_find_icon
+        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnbuscar.Location = New System.Drawing.Point(214, 22)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(53, 39)
+        Me.btnbuscar.TabIndex = 13
+        Me.btnbuscar.UseVisualStyleBackColor = True
+        '
+        'btneliminar
+        '
+        Me.btneliminar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._32218971
+        Me.btneliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btneliminar.Location = New System.Drawing.Point(154, 19)
+        Me.btneliminar.Name = "btneliminar"
+        Me.btneliminar.Size = New System.Drawing.Size(54, 42)
+        Me.btneliminar.TabIndex = 23
+        Me.btneliminar.UseVisualStyleBackColor = True
+        '
+        'btnactualizar
+        '
+        Me.btnactualizar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.Actalizar1
+        Me.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnactualizar.Location = New System.Drawing.Point(83, 22)
+        Me.btnactualizar.Name = "btnactualizar"
+        Me.btnactualizar.Size = New System.Drawing.Size(57, 39)
+        Me.btnactualizar.TabIndex = 23
+        Me.btnactualizar.UseVisualStyleBackColor = True
+        '
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._52_521721_close_cross_sign_in_a_square_button_comments
-        Me.PictureBox7.Location = New System.Drawing.Point(284, 18)
+        Me.PictureBox7.Location = New System.Drawing.Point(273, 22)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(45, 44)
+        Me.PictureBox7.Size = New System.Drawing.Size(44, 39)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox7.TabIndex = 16
         Me.PictureBox7.TabStop = False
         '
+        'btnregistrar
+        '
+        Me.btnregistrar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.png_transparent_computer_icons_user_profile_symbol_register_button_miscellaneous_blue_logo_thumbnail
+        Me.btnregistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnregistrar.Location = New System.Drawing.Point(20, 22)
+        Me.btnregistrar.Name = "btnregistrar"
+        Me.btnregistrar.Size = New System.Drawing.Size(48, 39)
+        Me.btnregistrar.TabIndex = 23
+        Me.btnregistrar.UseVisualStyleBackColor = True
+        '
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._exit
-        Me.PictureBox6.Location = New System.Drawing.Point(355, 19)
+        Me.PictureBox6.Location = New System.Drawing.Point(357, 22)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(45, 44)
+        Me.PictureBox6.Size = New System.Drawing.Size(45, 39)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 15
         Me.PictureBox6.TabStop = False
         '
-        'PictureBox5
+        'PictureBox3
         '
-        Me.PictureBox5.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.kisspng_computer_icons_scalable_vector_graphics_apple_icon_edit_png_icon_blue_pencil_5ab065d3a79673_8929716715215098436865
-        Me.PictureBox5.Location = New System.Drawing.Point(209, 18)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(45, 44)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 14
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._3221897
-        Me.PictureBox4.Location = New System.Drawing.Point(158, 19)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(45, 44)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 13
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.Actalizar
-        Me.PictureBox1.Location = New System.Drawing.Point(83, 19)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(45, 44)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.guardar
-        Me.PictureBox2.Location = New System.Drawing.Point(27, 19)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(41, 44)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 12
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.WhatsApp_Image_2023_06_17_at_7_59_24_PM
+        Me.PictureBox3.Location = New System.Drawing.Point(716, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(111, 54)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 23
+        Me.PictureBox3.TabStop = False
         '
         'FrmCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(747, 498)
+        Me.ClientSize = New System.Drawing.Size(845, 498)
+        Me.Controls.Add(Me.datagridcompras)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmCompras"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtidcompra As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label5 As Label
@@ -455,29 +396,22 @@ Partial Class FrmCompras
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txttotal As TextBox
+    Friend WithEvents dtpfecha As DateTimePicker
+    Friend WithEvents txtcantidadarticulo As TextBox
+    Friend WithEvents txtprecioarticulo As TextBox
+    Friend WithEvents txtarticulo As TextBox
+    Friend WithEvents txtidarticulo As TextBox
+    Friend WithEvents txtidproveedor As TextBox
+    Friend WithEvents txtidempleado As TextBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Id_Compra As DataGridViewTextBoxColumn
-    Friend WithEvents Id_Empleado As DataGridViewTextBoxColumn
-    Friend WithEvents Id_Proveedor As DataGridViewTextBoxColumn
-    Friend WithEvents Articulo As DataGridViewTextBoxColumn
-    Friend WithEvents Precio As DataGridViewLinkColumn
-    Friend WithEvents Cantidad As DataGridViewLinkColumn
-    Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents btnregistrar As Button
+    Friend WithEvents datagridcompras As DataGridView
+    Friend WithEvents btnactualizar As Button
+    Friend WithEvents btneliminar As Button
+    Friend WithEvents btnbuscar As Button
 End Class
