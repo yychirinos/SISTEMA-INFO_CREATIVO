@@ -70,7 +70,7 @@ Public Class FrmCompras
 
         MessageBox.Show("LOS DATOS SE ACTUALIZARON CORRECTAMENTE")
         limpiarcontroles()
-        llenardatagrigcompras(
+        llenardatagrigcompras()
         con.Close()
 
     End Sub
