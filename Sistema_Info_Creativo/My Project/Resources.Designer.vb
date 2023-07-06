@@ -264,6 +264,17 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property png_transparent_computer_icons_button_register_button_blue_text_rectangle_thumbnail() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("png-transparent-computer-icons-button-register-button-blue-text-rectangle-thumbna"& _ 
+                        "il", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property png_transparent_computer_icons_user_profile_symbol_register_button_miscellaneous_blue_logo_thumbnail() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("png-transparent-computer-icons-user-profile-symbol-register-button-miscellaneous-"& _ 

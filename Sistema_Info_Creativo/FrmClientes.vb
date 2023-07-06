@@ -4,7 +4,7 @@ Public Class FrmClientes
         If txtCodCliente.Text = "" Or txtNombreCliente.Text = "" Or txtapellidocliente.Text = "" Or Txtdnicliente.Text = "" Or txtdireccion.Text = "" Then
             MessageBox.Show("debe llenar todos los campos")
         Else
-            Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
             Dim cmd As SqlCommand = New SqlCommand("sp_Clientes", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
@@ -30,7 +30,7 @@ Public Class FrmClientes
     Sub llenarcombotipocliente()
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Try
             da = New SqlDataAdapter("select idtipocliente,destipocliente from TipoCliente", con)
             da.Fill(dt)
@@ -54,7 +54,7 @@ Public Class FrmClientes
         If txtCodCliente.Text = "" Or txtNombreCliente.Text = "" Or txtapellidocliente.Text = "" Or Txtdnicliente.Text = "" Or txtdireccion.Text = "" Then
             MessageBox.Show("debe llenar todos los campos")
         Else
-            Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
             Dim cmd As SqlCommand = New SqlCommand("sp_Clientes", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
@@ -76,7 +76,7 @@ Public Class FrmClientes
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        Dim con As New SqlClient.SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
         con.Open()
         Dim reader As SqlClient.SqlDataReader
         Dim cmd As New SqlClient.SqlCommand("Select * from Clientes where codcliente = '" & txtCodCliente.Text & "'", con)
@@ -125,7 +125,7 @@ Public Class FrmClientes
 
 
     Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim cmd As SqlCommand = New SqlCommand("delete from Clientes
                                                     where codcliente=@codcliente", con)
         con.Open()
@@ -147,7 +147,7 @@ Public Class FrmClientes
     End Sub
 
     Sub llenargridclientes()
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
         Try

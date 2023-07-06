@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmLOGIN1
+Partial Class Frmlogin
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -85,7 +85,7 @@ Partial Class FrmLOGIN1
         Me.btnsalir.Text = "Salir"
         Me.btnsalir.UseVisualStyleBackColor = True
         '
-        'FrmLOGIN1
+        'Frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -100,7 +100,7 @@ Partial Class FrmLOGIN1
         Me.Controls.Add(Me.txtusuario)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "FrmLOGIN1"
+        Me.Name = "Frmlogin"
         Me.Text = "REGISTRAR USUARIO"
         Me.ResumeLayout(False)
         Me.PerformLayout()

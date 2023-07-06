@@ -4,7 +4,7 @@ Public Class FrmEmpleados
         If txtNumEmpleado.Text = "" Or txtnombres.Text = "" Or txtapellidos.Text = "" Or txtDNI.Text = "" Or txtdireccion.Text = "" Or txtcargo.Text = "" Or txtnivelacademico.Text = "" Then
             MessageBox.Show("debe llenar todos los campos")
         Else
-            Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
             Dim cmd As SqlCommand = New SqlCommand("sp_Empleados", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
@@ -40,7 +40,7 @@ Public Class FrmEmpleados
     Sub llenarcombosexo()
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Try
             da = New SqlDataAdapter("select idsexo,descripcion from ListadoSexos", con)
             da.Fill(dt)
@@ -57,7 +57,7 @@ Public Class FrmEmpleados
     Sub llenarcomboestadocivil()
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Try
             da = New SqlDataAdapter("select idestadocivil,desestadocivil from ListadoEstadoCivil", con)
             da.Fill(dt)
@@ -98,7 +98,7 @@ Public Class FrmEmpleados
             MessageBox.Show("Debe llenar todos los campos")
         Else
 
-            Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
             Dim cmd As SqlCommand = New SqlCommand("sp_Empleados", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
@@ -134,7 +134,7 @@ Public Class FrmEmpleados
     End Sub
 
     Private Sub eliminar_Click(sender As Object, e As EventArgs) Handles eliminar.Click
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim cmd As SqlCommand = New SqlCommand("delete from Empleados
                                                     where numempleado=@numempleado", con)
         con.Open()
@@ -165,7 +165,7 @@ Public Class FrmEmpleados
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        Dim con As New SqlClient.SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
         con.Open()
         Dim reader As SqlClient.SqlDataReader
         Dim cmd As New SqlClient.SqlCommand("Select * from Empleados where numempleado = '" & txtNumEmpleado.Text & "'", con)

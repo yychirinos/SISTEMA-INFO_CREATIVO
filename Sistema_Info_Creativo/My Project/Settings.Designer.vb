@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -57,11 +57,11 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-3LMQAO4P;Initial Catalog=InfoCreativos;Integrated Security=Tru"& _ 
-            "e")>  _
-        Public ReadOnly Property InfoCreativos() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-97BEOULP\SQLEXPRESS;Initial Catalog=INFO_CREATIVO;Integrated S"& _ 
+            "ecurity=True")>  _
+        Public ReadOnly Property INFO_CREATIVO() As String
             Get
-                Return CType(Me("InfoCreativos"),String)
+                Return CType(Me("INFO_CREATIVO"),String)
             End Get
         End Property
     End Class

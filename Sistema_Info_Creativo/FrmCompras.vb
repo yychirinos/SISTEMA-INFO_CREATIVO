@@ -5,7 +5,7 @@ Public Class FrmCompras
 
             MessageBox.Show("Porvafor  llenar todos los campos")
         Else
-            Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
             Dim cmd As SqlCommand = New SqlCommand("sp_COMPRAS", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
@@ -27,7 +27,7 @@ Public Class FrmCompras
 
     End Sub
     Sub llenardatagrigcompras()
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim da As New SqlDataAdapter()
         Dim dt As New DataTable
         Try
@@ -52,7 +52,7 @@ Public Class FrmCompras
     End Sub
 
     Private Sub btnactualizar_Click(sender As Object, e As EventArgs) Handles btnactualizar.Click
-        Dim con As SqlConnection = New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim cmd As SqlCommand = New SqlCommand("SP_COMPRAS", con)
         con.Open()
         cmd.CommandType = CommandType.StoredProcedure
@@ -76,7 +76,7 @@ Public Class FrmCompras
     End Sub
 
     Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
-        Dim con As New SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
         Dim cmd As SqlCommand = New SqlCommand("delete from COMPRAS
                                                   where ID_COMPRA=@ID_COMPRA", con)
         con.Open()
@@ -91,7 +91,7 @@ Public Class FrmCompras
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        Dim con As New SqlClient.SqlConnection(My.Settings.InfoCreativos)
+        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
         con.Open()
         Dim reader As SqlClient.SqlDataReader
         Dim cmd As New SqlClient.SqlCommand("Select * from COMPRAS where ID_COMPRA= '" & txtidcompra.Text & "'", con)

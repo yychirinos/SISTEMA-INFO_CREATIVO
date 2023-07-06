@@ -11,9 +11,24 @@
     <AssemblyName>Sistema_Info_Creativo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -97,6 +112,12 @@
     <Compile Include="FrmLOGIN1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmUSUARIOS.Designer.vb">
+      <DependentUpon>FrmUSUARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUSUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmVentas.Designer.vb">
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
@@ -133,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLOGIN1.resx">
       <DependentUpon>FrmLOGIN1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUSUARIOS.resx">
+      <DependentUpon>FrmUSUARIOS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>
@@ -236,6 +260,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2023-07-04 at 8.52.59 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-button-register-button-blue-text-rectangle-thumbnail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
