@@ -53,4 +53,36 @@ Public Class FrmProveedores
             FiltrarProveedores("TELEFONO = '" & telefonoProveedor & "'")
         End If
     End Sub
+
+    Private Sub FiltrarProveedores(filtro As String)
+        dtProveedores.DefaultView.RowFilter = filtro
+    End Sub
+
+    Private Sub LimpiarFiltros()
+        txtBuscarID.Text = ""
+        txtBuscarNombre.Text = ""
+        txtBuscarTelefono.Text = ""
+
+        ' Mostrar todos los proveedores
+        dtProveedores.DefaultView.RowFilter = ""
+    End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        LimpiarFiltros()
+    End Sub
+
+    Private Sub btnNuevoProveedor_Click(sender As Object, e As EventArgs) Handles btnNuevoProveedor.Click
+        ' Mostrar el formulario de agregar proveedores
+        FrmAgregarProveedor.ShowDialog()
+    End Sub
+
+    Private Sub btnactualizar_Click(sender As Object, e As EventArgs) Handles btnactualizar.Click
+        ' Llamar al método CargarProveedores en FrmProveedores para actualizar la lista de proveedores
+        Dim frmProveedores As FrmProveedores = DirectCast(Application.OpenForms("FrmProveedores"), FrmProveedores)
+        frmProveedores.CargarProveedores()
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        FrmModificarProveedor.Show()
+    End Sub
 End Class
