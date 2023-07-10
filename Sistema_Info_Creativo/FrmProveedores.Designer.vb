@@ -25,16 +25,16 @@ Partial Class FrmProveedores
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProveedores))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.txtBuscarTelefono = New System.Windows.Forms.TextBox()
+        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.txtBuscarNombre = New System.Windows.Forms.TextBox()
         Me.txtBuscarID = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnbuscar = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.dgProveedores = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnsalir = New System.Windows.Forms.Button()
@@ -42,8 +42,8 @@ Partial Class FrmProveedores
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.btnNuevoProveedor = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -71,6 +71,19 @@ Partial Class FrmProveedores
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "PROVEEDORES"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.vector_find_icon
+        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE2
+        Me.PictureBox3.Location = New System.Drawing.Point(896, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(65, 66)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 24
+        Me.PictureBox3.TabStop = False
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.btnLimpiar)
@@ -91,6 +104,18 @@ Partial Class FrmProveedores
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar por :"
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackgroundImage = CType(resources.GetObject("btnLimpiar.BackgroundImage"), System.Drawing.Image)
+        Me.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.Location = New System.Drawing.Point(877, 17)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(39, 40)
+        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'txtBuscarTelefono
         '
         Me.txtBuscarTelefono.Location = New System.Drawing.Point(102, 57)
@@ -98,6 +123,19 @@ Partial Class FrmProveedores
         Me.txtBuscarTelefono.Name = "txtBuscarTelefono"
         Me.txtBuscarTelefono.Size = New System.Drawing.Size(252, 19)
         Me.txtBuscarTelefono.TabIndex = 14
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
+        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b1
+        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnbuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnbuscar.Location = New System.Drawing.Point(823, 16)
+        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(39, 40)
+        Me.btnbuscar.TabIndex = 12
+        Me.btnbuscar.UseVisualStyleBackColor = False
         '
         'txtBuscarNombre
         '
@@ -144,44 +182,6 @@ Partial Class FrmProveedores
         Me.Label1.Size = New System.Drawing.Size(86, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Proveedor:"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.BackgroundImage = CType(resources.GetObject("btnLimpiar.BackgroundImage"), System.Drawing.Image)
-        Me.btnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLimpiar.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(877, 17)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(39, 40)
-        Me.btnLimpiar.TabIndex = 15
-        Me.btnLimpiar.UseVisualStyleBackColor = True
-        '
-        'btnbuscar
-        '
-        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
-        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b1
-        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnbuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnbuscar.Location = New System.Drawing.Point(823, 16)
-        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnbuscar.Name = "btnbuscar"
-        Me.btnbuscar.Size = New System.Drawing.Size(39, 40)
-        Me.btnbuscar.TabIndex = 12
-        Me.btnbuscar.UseVisualStyleBackColor = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.vector_find_icon
-        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE2
-        Me.PictureBox3.Location = New System.Drawing.Point(896, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(65, 66)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 24
-        Me.PictureBox3.TabStop = False
         '
         'dgProveedores
         '
@@ -280,9 +280,9 @@ Partial Class FrmProveedores
         Me.Text = "INFO CREATIVOS - Proveedores"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
