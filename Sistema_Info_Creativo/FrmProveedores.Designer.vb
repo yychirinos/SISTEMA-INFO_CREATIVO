@@ -36,10 +36,16 @@ Partial Class FrmProveedores
         Me.btnbuscar = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.dgProveedores = New System.Windows.Forms.DataGridView()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnsalir = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnactualizar = New System.Windows.Forms.Button()
+        Me.btnNuevoProveedor = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -189,12 +195,81 @@ Partial Class FrmProveedores
         Me.dgProveedores.Size = New System.Drawing.Size(950, 281)
         Me.dgProveedores.TabIndex = 20
         '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.btnsalir)
+        Me.Panel3.Controls.Add(Me.btnModificar)
+        Me.Panel3.Controls.Add(Me.btnactualizar)
+        Me.Panel3.Controls.Add(Me.btnNuevoProveedor)
+        Me.Panel3.Location = New System.Drawing.Point(24, 505)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(950, 79)
+        Me.Panel3.TabIndex = 21
+        '
+        'btnsalir
+        '
+        Me.btnsalir.BackColor = System.Drawing.Color.Transparent
+        Me.btnsalir.BackgroundImage = CType(resources.GetObject("btnsalir.BackgroundImage"), System.Drawing.Image)
+        Me.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnsalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsalir.Location = New System.Drawing.Point(638, 14)
+        Me.btnsalir.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnsalir.Name = "btnsalir"
+        Me.btnsalir.Size = New System.Drawing.Size(55, 54)
+        Me.btnsalir.TabIndex = 4
+        Me.btnsalir.UseVisualStyleBackColor = False
+        '
+        'btnModificar
+        '
+        Me.btnModificar.BackColor = System.Drawing.Color.Transparent
+        Me.btnModificar.BackgroundImage = CType(resources.GetObject("btnModificar.BackgroundImage"), System.Drawing.Image)
+        Me.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.Location = New System.Drawing.Point(717, 14)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(55, 54)
+        Me.btnModificar.TabIndex = 3
+        Me.btnModificar.UseVisualStyleBackColor = False
+        '
+        'btnactualizar
+        '
+        Me.btnactualizar.BackColor = System.Drawing.Color.Transparent
+        Me.btnactualizar.BackgroundImage = CType(resources.GetObject("btnactualizar.BackgroundImage"), System.Drawing.Image)
+        Me.btnactualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnactualizar.Location = New System.Drawing.Point(794, 14)
+        Me.btnactualizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnactualizar.Name = "btnactualizar"
+        Me.btnactualizar.Size = New System.Drawing.Size(55, 54)
+        Me.btnactualizar.TabIndex = 1
+        Me.btnactualizar.UseVisualStyleBackColor = False
+        '
+        'btnNuevoProveedor
+        '
+        Me.btnNuevoProveedor.BackColor = System.Drawing.Color.Transparent
+        Me.btnNuevoProveedor.BackgroundImage = CType(resources.GetObject("btnNuevoProveedor.BackgroundImage"), System.Drawing.Image)
+        Me.btnNuevoProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnNuevoProveedor.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnNuevoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevoProveedor.Location = New System.Drawing.Point(868, 14)
+        Me.btnNuevoProveedor.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnNuevoProveedor.Name = "btnNuevoProveedor"
+        Me.btnNuevoProveedor.Size = New System.Drawing.Size(55, 54)
+        Me.btnNuevoProveedor.TabIndex = 0
+        Me.btnNuevoProveedor.UseVisualStyleBackColor = False
+        '
         'FrmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(996, 595)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.dgProveedores)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
@@ -209,6 +284,7 @@ Partial Class FrmProveedores
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -226,4 +302,9 @@ Partial Class FrmProveedores
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents dgProveedores As DataGridView
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnsalir As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnactualizar As Button
+    Friend WithEvents btnNuevoProveedor As Button
 End Class
