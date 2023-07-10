@@ -52,27 +52,32 @@ Public Class FrmCompras
     End Sub
 
     Private Sub btnactualizar_Click(sender As Object, e As EventArgs) Handles btnactualizar.Click
-        Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
-        Dim cmd As SqlCommand = New SqlCommand("SP_COMPRAS", con)
-        con.Open()
-        cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@BANDERA", 2)
-        cmd.Parameters.AddWithValue("@ID_COMPRA", txtidcompra.Text)
-        cmd.Parameters.AddWithValue("@ID_EMPLEADO", txtidempleado.Text)
-        cmd.Parameters.AddWithValue("@ID_PROVEEDOR", txtidproveedor.Text)
-        cmd.Parameters.AddWithValue("@ID_ARTICULO", txtidarticulo.Text)
-        cmd.Parameters.AddWithValue("@ARTICULO", txtarticulo.Text)
-        cmd.Parameters.AddWithValue("@PRECIO_ARTICULO", txtprecioarticulo.Text)
-        cmd.Parameters.AddWithValue("@CANTIDAD_ARTICULO", txtcantidadarticulo.Text)
-        cmd.Parameters.AddWithValue("@FECHA_HORA", dtpfecha.Value)
-        cmd.Parameters.AddWithValue("@TOTAL", txttotal.Text)
+        If txtidcompra.Text = "" Or txtidempleado.Text = "" Or txtidproveedor.Text = "" Or txtidarticulo.Text = "" Or txtarticulo.Text = "" Or txtprecioarticulo.Text = "" Or txtcantidadarticulo.Text = "" Or txttotal.Text = "" Then
 
+            MessageBox.Show("Porvafor  llenar todos los campos")
+        Else
 
-        MessageBox.Show("LOS DATOS SE ACTUALIZARON CORRECTAMENTE")
-        limpiarcontroles()
-        llenardatagrigcompras()
-        con.Close()
+            Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
+            Dim cmd As SqlCommand = New SqlCommand("SP_COMPRAS", con)
+            con.Open()
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@BANDERA", 2)
+            cmd.Parameters.AddWithValue("@ID_COMPRA", txtidcompra.Text)
+            cmd.Parameters.AddWithValue("@ID_EMPLEADO", txtidempleado.Text)
+            cmd.Parameters.AddWithValue("@ID_PROVEEDOR", txtidproveedor.Text)
+            cmd.Parameters.AddWithValue("@ID_ARTICULO", txtidarticulo.Text)
+            cmd.Parameters.AddWithValue("@ARTICULO", txtarticulo.Text)
+            cmd.Parameters.AddWithValue("@PRECIO_ARTICULO", txtprecioarticulo.Text)
+            cmd.Parameters.AddWithValue("@CANTIDAD_ARTICULO", txtcantidadarticulo.Text)
+            cmd.Parameters.AddWithValue("@FECHA_HORA", dtpfecha.Value)
+            cmd.Parameters.AddWithValue("@TOTAL", txttotal.Text)
 
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("LOS DATOS SE ACTUALIZARON CORRECTAMENTE")
+            limpiarcontroles()
+            llenardatagrigcompras()
+            con.Close()
+        End If
     End Sub
 
     Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
@@ -149,5 +154,52 @@ Public Class FrmCompras
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         limpiarcontroles()
+    End Sub
+
+    Private Sub btntotal_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub txtprecioarticulo_TextChanged(sender As Object, e As EventArgs) Handles txtprecioarticulo.TextChanged
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub btncalcular_Click(sender As Object, e As EventArgs) Handles btncalcular.Click
+        txttotal.Text = Val(txtcantidadarticulo.Text) * Val(txtprecioarticulo.Text)
+    End Sub
+
+    Private Sub txtcantidadarticulo_TextChanged(sender As Object, e As EventArgs) Handles txtcantidadarticulo.TextChanged
+
+    End Sub
+
+    Private Sub txtarticulo_TextChanged(sender As Object, e As EventArgs) Handles txtarticulo.TextChanged
+
+    End Sub
+
+    Private Sub btnlimpiar_Click(sender As Object, e As EventArgs) Handles btnlimpiar.Click
+        txtcantidadarticulo.Clear()
+        txtprecioarticulo.Clear()
+        txttotal.Text = ""
+        txtcantidadarticulo.Focus()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
+    End Sub
+
+    Private Sub txttotal_TextChanged(sender As Object, e As EventArgs) Handles txttotal.TextChanged
+
     End Sub
 End Class
