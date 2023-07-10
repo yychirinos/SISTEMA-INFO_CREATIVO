@@ -285,5 +285,11 @@
   <ItemGroup>
     <None Include="Resources\png-transparent-computer-icons-button-register-button-blue-text-rectangle-thumbnail.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c790123003fa702a1d2795b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO INFO CREATIVE2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
