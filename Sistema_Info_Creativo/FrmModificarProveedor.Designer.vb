@@ -23,8 +23,10 @@ Partial Class FrmModificarProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarModificar = New System.Windows.Forms.Button()
         Me.txtModificarId = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtModificarNombre = New System.Windows.Forms.TextBox()
@@ -44,12 +46,10 @@ Partial Class FrmModificarProveedor
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnCancelarModificar = New System.Windows.Forms.Button()
         Me.btnModificarDatos = New System.Windows.Forms.Button()
-        Me.btnBuscarModificar = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -61,6 +61,18 @@ Partial Class FrmModificarProveedor
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(606, 58)
         Me.Panel1.TabIndex = 28
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE3
+        Me.PictureBox3.Location = New System.Drawing.Point(536, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(65, 66)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 26
+        Me.PictureBox3.TabStop = False
         '
         'Label9
         '
@@ -99,6 +111,19 @@ Partial Class FrmModificarProveedor
         Me.GroupBox1.TabIndex = 29
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Obligatorios :"
+        '
+        'btnBuscarModificar
+        '
+        Me.btnBuscarModificar.BackColor = System.Drawing.Color.Transparent
+        Me.btnBuscarModificar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b2
+        Me.btnBuscarModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBuscarModificar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscarModificar.Location = New System.Drawing.Point(513, 19)
+        Me.btnBuscarModificar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBuscarModificar.Name = "btnBuscarModificar"
+        Me.btnBuscarModificar.Size = New System.Drawing.Size(39, 40)
+        Me.btnBuscarModificar.TabIndex = 18
+        Me.btnBuscarModificar.UseVisualStyleBackColor = False
         '
         'txtModificarId
         '
@@ -329,37 +354,13 @@ Partial Class FrmModificarProveedor
         Me.btnModificarDatos.Text = "Aplicar Cambios"
         Me.btnModificarDatos.UseVisualStyleBackColor = False
         '
-        'btnBuscarModificar
-        '
-        Me.btnBuscarModificar.BackColor = System.Drawing.Color.Transparent
-        Me.btnBuscarModificar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b2
-        Me.btnBuscarModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnBuscarModificar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscarModificar.Location = New System.Drawing.Point(513, 19)
-        Me.btnBuscarModificar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnBuscarModificar.Name = "btnBuscarModificar"
-        Me.btnBuscarModificar.Size = New System.Drawing.Size(39, 40)
-        Me.btnBuscarModificar.TabIndex = 18
-        Me.btnBuscarModificar.UseVisualStyleBackColor = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE3
-        Me.PictureBox3.Location = New System.Drawing.Point(536, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(65, 66)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 26
-        Me.PictureBox3.TabStop = False
-        '
         'FrmModificarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(601, 595)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
@@ -370,10 +371,10 @@ Partial Class FrmModificarProveedor
         Me.Text = "Modificar Proveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
