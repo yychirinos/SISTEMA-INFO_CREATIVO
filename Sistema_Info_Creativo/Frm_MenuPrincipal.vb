@@ -117,5 +117,38 @@ Public Class Frm_MenuPrincipal
         lblfecha.Text = DateTime.Now.ToLongDateString()
 
     End Sub
+
+    Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
+        Me.Dispose()
+        FrmEmpleados.ShowDialog()
+
+    End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        Me.Dispose()
+        FrmClientes.ShowDialog()
+
+    End Sub
+
+    Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
+        Me.Dispose()
+        FrmUSUARIOS.ShowDialog()
+
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
+        Me.Dispose()
+        FrmProveedores.ShowDialog()
+    End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        Me.Dispose()
+        FrmVentas.ShowDialog()
+    End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
+        Me.Dispose()
+        FrmCompras9.ShowDialog()
+    End Sub
 End Class
 
