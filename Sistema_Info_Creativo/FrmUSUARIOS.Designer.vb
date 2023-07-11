@@ -25,18 +25,22 @@ Partial Class FrmUSUARIOS
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtcorreo = New System.Windows.Forms.TextBox()
-        Me.txttelefono = New System.Windows.Forms.TextBox()
-        Me.txtapellido = New System.Windows.Forms.TextBox()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.txtcontrasena = New System.Windows.Forms.TextBox()
+        Me.txidusuario = New System.Windows.Forms.TextBox()
+        Me.txtnumempleado = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btningresar = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.btningresar = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtnivelacceso = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtestadoactivo = New System.Windows.Forms.TextBox()
+        Me.btnsalir = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,59 +50,52 @@ Partial Class FrmUSUARIOS
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(33, 116)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(20, 16)
+        Me.Label1.Size = New System.Drawing.Size(108, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID"
+        Me.Label1.Text = "NumEmpleados "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 166)
+        Me.Label2.Location = New System.Drawing.Point(33, 156)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 16)
+        Me.Label2.Size = New System.Drawing.Size(81, 16)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "NOMBRE"
+        Me.Label2.Text = "IDUSUARIO"
         '
         'txtcorreo
         '
-        Me.txtcorreo.Location = New System.Drawing.Point(118, 351)
+        Me.txtcorreo.Location = New System.Drawing.Point(154, 266)
         Me.txtcorreo.Multiline = True
         Me.txtcorreo.Name = "txtcorreo"
-        Me.txtcorreo.Size = New System.Drawing.Size(301, 40)
+        Me.txtcorreo.Size = New System.Drawing.Size(239, 26)
         Me.txtcorreo.TabIndex = 10
         '
-        'txttelefono
+        'txtcontrasena
         '
-        Me.txttelefono.Location = New System.Drawing.Point(118, 280)
-        Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(100, 22)
-        Me.txttelefono.TabIndex = 9
+        Me.txtcontrasena.Location = New System.Drawing.Point(163, 200)
+        Me.txtcontrasena.Name = "txtcontrasena"
+        Me.txtcontrasena.Size = New System.Drawing.Size(100, 22)
+        Me.txtcontrasena.TabIndex = 8
         '
-        'txtapellido
+        'txidusuario
         '
-        Me.txtapellido.Location = New System.Drawing.Point(110, 219)
-        Me.txtapellido.Name = "txtapellido"
-        Me.txtapellido.Size = New System.Drawing.Size(100, 22)
-        Me.txtapellido.TabIndex = 8
+        Me.txidusuario.Location = New System.Drawing.Point(163, 150)
+        Me.txidusuario.Name = "txidusuario"
+        Me.txidusuario.Size = New System.Drawing.Size(100, 22)
+        Me.txidusuario.TabIndex = 7
         '
-        'txtnombre
+        'txtnumempleado
         '
-        Me.txtnombre.Location = New System.Drawing.Point(110, 160)
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(100, 22)
-        Me.txtnombre.TabIndex = 7
-        '
-        'txtid
-        '
-        Me.txtid.Location = New System.Drawing.Point(110, 110)
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(100, 22)
-        Me.txtid.TabIndex = 6
+        Me.txtnumempleado.Location = New System.Drawing.Point(163, 110)
+        Me.txtnumempleado.Name = "txtnumempleado"
+        Me.txtnumempleado.Size = New System.Drawing.Size(100, 22)
+        Me.txtnumempleado.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(33, 375)
+        Me.Label5.Location = New System.Drawing.Point(33, 269)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 16)
         Me.Label5.TabIndex = 4
@@ -107,20 +104,19 @@ Partial Class FrmUSUARIOS
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(33, 280)
+        Me.Label4.Location = New System.Drawing.Point(33, 209)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 16)
+        Me.Label4.Size = New System.Drawing.Size(101, 16)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "TELEFONO"
+        Me.Label4.Text = "CONTRASEÑA"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(33, 225)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 16)
+        Me.Label3.Size = New System.Drawing.Size(0, 16)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "APELLIDO"
         '
         'Panel1
         '
@@ -131,8 +127,17 @@ Partial Class FrmUSUARIOS
         Me.Panel1.Location = New System.Drawing.Point(12, 11)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1103, 66)
+        Me.Panel1.Size = New System.Drawing.Size(574, 66)
         Me.Panel1.TabIndex = 5
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(36, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(162, 16)
+        Me.Label6.TabIndex = 25
+        Me.Label6.Text = "REGISTRE SU USUARIO"
         '
         'Label10
         '
@@ -144,30 +149,11 @@ Partial Class FrmUSUARIOS
         Me.Label10.Size = New System.Drawing.Size(0, 29)
         Me.Label10.TabIndex = 24
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(36, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(162, 16)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "REGISTRE SU USUARIO"
-        '
-        'btningresar
-        '
-        Me.btningresar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.png_transparent_computer_icons_button_register_button_blue_text_rectangle_thumbnail
-        Me.btningresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btningresar.Location = New System.Drawing.Point(250, 451)
-        Me.btningresar.Name = "btningresar"
-        Me.btningresar.Size = New System.Drawing.Size(159, 62)
-        Me.btningresar.TabIndex = 5
-        Me.btningresar.UseVisualStyleBackColor = True
-        '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Blue
         Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.WhatsApp_Image_2023_06_17_at_7_59_24_PM
-        Me.PictureBox3.Location = New System.Drawing.Point(955, 0)
+        Me.PictureBox3.Location = New System.Drawing.Point(424, 0)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(148, 66)
@@ -175,21 +161,76 @@ Partial Class FrmUSUARIOS
         Me.PictureBox3.TabIndex = 23
         Me.PictureBox3.TabStop = False
         '
+        'btningresar
+        '
+        Me.btningresar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.png_transparent_computer_icons_button_register_button_blue_text_rectangle_thumbnail
+        Me.btningresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btningresar.Location = New System.Drawing.Point(12, 469)
+        Me.btningresar.Name = "btningresar"
+        Me.btningresar.Size = New System.Drawing.Size(159, 62)
+        Me.btningresar.TabIndex = 5
+        Me.btningresar.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(33, 347)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(103, 16)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "NIVEL ACCESO"
+        '
+        'txtnivelacceso
+        '
+        Me.txtnivelacceso.Location = New System.Drawing.Point(163, 341)
+        Me.txtnivelacceso.Name = "txtnivelacceso"
+        Me.txtnivelacceso.Size = New System.Drawing.Size(100, 22)
+        Me.txtnivelacceso.TabIndex = 12
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(31, 409)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(115, 16)
+        Me.Label8.TabIndex = 13
+        Me.Label8.Text = "ESTADO ACTIVO"
+        '
+        'txtestadoactivo
+        '
+        Me.txtestadoactivo.Location = New System.Drawing.Point(163, 403)
+        Me.txtestadoactivo.Name = "txtestadoactivo"
+        Me.txtestadoactivo.Size = New System.Drawing.Size(100, 22)
+        Me.txtestadoactivo.TabIndex = 14
+        '
+        'btnsalir
+        '
+        Me.btnsalir.Location = New System.Drawing.Point(197, 469)
+        Me.btnsalir.Name = "btnsalir"
+        Me.btnsalir.Size = New System.Drawing.Size(107, 62)
+        Me.btnsalir.TabIndex = 15
+        Me.btnsalir.Text = "SALIR "
+        Me.btnsalir.UseVisualStyleBackColor = True
+        '
         'FrmUSUARIOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1118, 629)
+        Me.ClientSize = New System.Drawing.Size(599, 535)
+        Me.Controls.Add(Me.btnsalir)
+        Me.Controls.Add(Me.txtestadoactivo)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.txtnivelacceso)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btningresar)
         Me.Controls.Add(Me.txtcorreo)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtapellido)
+        Me.Controls.Add(Me.txtcontrasena)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtnombre)
-        Me.Controls.Add(Me.txtid)
+        Me.Controls.Add(Me.txidusuario)
+        Me.Controls.Add(Me.txtnumempleado)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Name = "FrmUSUARIOS"
@@ -209,12 +250,16 @@ Partial Class FrmUSUARIOS
     Friend WithEvents Label3 As Label
     Friend WithEvents btningresar As Button
     Friend WithEvents txtcorreo As TextBox
-    Friend WithEvents txttelefono As TextBox
-    Friend WithEvents txtapellido As TextBox
-    Friend WithEvents txtnombre As TextBox
-    Friend WithEvents txtid As TextBox
+    Friend WithEvents txtcontrasena As TextBox
+    Friend WithEvents txidusuario As TextBox
+    Friend WithEvents txtnumempleado As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtnivelacceso As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtestadoactivo As TextBox
+    Friend WithEvents btnsalir As Button
 End Class

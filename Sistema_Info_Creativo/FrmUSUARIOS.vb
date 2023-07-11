@@ -5,24 +5,26 @@ Public Class FrmUSUARIOS
         Dim connectionString As String = "Data Source=LAPTOP-97BEOULP\SQLEXPRESS;Initial Catalog=INFO_CREATIVO;Integrated Security=True"
 
         ' Obtener los valores del formulario
-        Dim ID As String = txtid.Text
-        Dim nombre As String = txtnombre.Text
-        Dim apellido As String = txtapellido.Text
-        Dim telefono As String = txttelefono.Text
+        Dim NumEmpleado As String = txtnumempleado.Text
+        Dim idusuario As String = txidusuario.Text
+        Dim contraseña As String = txtcontrasena.Text
         Dim correo As String = txtcorreo.Text
+        Dim nivelacceso As String = txtnivelacceso.Text
+        Dim estadoactivo As String = txtestadoactivo.Text
         ' Crear la consulta SQL para insertar los datos
-        Dim query As String = "INSERT INTO  REGISTROUSUARIO (id,nombre,apellido,telefono,correo) VALUES (@id,@nombre, @apellido, @telefono@correo)"
+        Dim query As String = "INSERT INTO  REGISTROUSUARIO (numempleado,idusuario,contrasena ,correo,vivelacceso,estadoactivo) VALUES (@numepleado,@idusuario, @contrasena,@correo @nivelacceso,@estadoactivo)"
 
         ' Establecer la conexión con la base de datos
         Using connection As New SqlConnection(connectionString)
             ' Crear el objeto SqlCommand
             Using command As New SqlCommand(query, connection)
                 ' Agregar parámetros a la consulta
-                command.Parameters.AddWithValue("@id", ID)
-                command.Parameters.AddWithValue("@Nombre", nombre)
-                command.Parameters.AddWithValue("@apellido", apellido)
-                command.Parameters.AddWithValue("@telefono", telefono)
+                command.Parameters.AddWithValue("@numempleado", NumEmpleado)
+                command.Parameters.AddWithValue("@idusuario", idusuario)
+                command.Parameters.AddWithValue("@contrasena", contraseña)
                 command.Parameters.AddWithValue("@correo", correo)
+                command.Parameters.AddWithValue("@nivelacceso", nivelacceso)
+                command.Parameters.AddWithValue("@estadoactivo", estadoactivo)
                 ' Abrir la conexión
                 connection.Open()
 
@@ -35,11 +37,12 @@ Public Class FrmUSUARIOS
         End Using
 
         ' Limpiar los campos del formulario después de guardar los datos
-        txtid.Text = ""
-        txtnombre.Text = ""
-        txtapellido.Text = ""
-        txttelefono.Text = ""
+        txtnumempleado.Text = ""
+        txidusuario.Text = ""
+        txtcontrasena.Text = ""
         txtcorreo.Text = ""
+        txtnivelacceso.Text = ""
+        txtestadoactivo.Text = ""
         MessageBox.Show("Datos guardados correctamente.")
     End Sub
 
