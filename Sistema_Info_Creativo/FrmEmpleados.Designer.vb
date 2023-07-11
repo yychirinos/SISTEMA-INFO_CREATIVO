@@ -23,8 +23,6 @@ Partial Class FrmEmpleados
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.cmbsexo = New System.Windows.Forms.ComboBox()
         Me.dtpfechanac = New System.Windows.Forms.DateTimePicker()
         Me.txtapellidos = New System.Windows.Forms.TextBox()
@@ -53,6 +51,7 @@ Partial Class FrmEmpleados
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -65,15 +64,16 @@ Partial Class FrmEmpleados
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.actualizar = New System.Windows.Forms.Button()
         Me.guardar = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -99,27 +99,6 @@ Partial Class FrmEmpleados
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion Principal."
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._327527
-        Me.PictureBox1.Location = New System.Drawing.Point(500, 43)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 135)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
-        'btnbuscar
-        '
-        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
-        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
-        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnbuscar.Location = New System.Drawing.Point(275, 28)
-        Me.btnbuscar.Name = "btnbuscar"
-        Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
-        Me.btnbuscar.TabIndex = 12
-        Me.btnbuscar.UseVisualStyleBackColor = False
         '
         'cmbsexo
         '
@@ -371,8 +350,20 @@ Partial Class FrmEmpleados
         Me.Panel1.Size = New System.Drawing.Size(880, 67)
         Me.Panel1.TabIndex = 3
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(290, 15)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(295, 49)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "EMPLEADOS"
+        '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Cancelar)
@@ -440,7 +431,7 @@ Partial Class FrmEmpleados
         Me.Panel3.Controls.Add(Me.btncancelar)
         Me.Panel3.Controls.Add(Me.actualizar)
         Me.Panel3.Controls.Add(Me.guardar)
-        Me.Panel3.Location = New System.Drawing.Point(82, 639)
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(722, 70)
         Me.Panel3.TabIndex = 4
@@ -495,17 +486,6 @@ Partial Class FrmEmpleados
         Me.guardar.Text = "Guardar"
         Me.guardar.UseVisualStyleBackColor = True
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(290, 15)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(299, 51)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "EMPLEADOS"
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE1
@@ -517,12 +497,32 @@ Partial Class FrmEmpleados
         Me.PictureBox3.TabIndex = 25
         Me.PictureBox3.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._327527
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 43)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(115, 135)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
+        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
+        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnbuscar.Location = New System.Drawing.Point(275, 28)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
+        Me.btnbuscar.TabIndex = 12
+        Me.btnbuscar.UseVisualStyleBackColor = False
+        '
         'FrmEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(879, 738)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox2)
@@ -531,7 +531,6 @@ Partial Class FrmEmpleados
         Me.Text = "FrmEmpleados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -539,6 +538,7 @@ Partial Class FrmEmpleados
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
