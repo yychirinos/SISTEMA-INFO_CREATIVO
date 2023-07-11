@@ -20,14 +20,22 @@ Public Class Frmlogin
         Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
         con.Open()
         Dim reader As SqlClient.SqlDataReader
-        Dim cmd As New SqlClient.SqlCommand("SELECT REGISTROUSUARIO, contrasena FROM  USUARIO Where USUARIO = '" & txtusuario.Text & "' and contrasena = '" & txtcontrasena.Text & "' and estadoactivo = 1", con)
+        Dim cmd As New SqlClient.SqlCommand("SELECT *
+                                             FROM REGISTROUSUARIO
+                                             where idusuario='" & txtusuario.Text & "' and contrasena = '" & txtcontrasena.Text & "' and estadoactivo=1", con)
 
         reader = cmd.ExecuteReader
 
+
         If reader.Read Then
-            MessageBox.Show("Bienvenido '" & txtusuario.Text & "'")
+            VariablesPublicas.idusuario = reader.Item("idusuario")
+            VariablesPublicas.nivelacceso = reader.Item("nivelacceso")
+            Me.Dispose()
+            Frm_MenuPrincipal.ShowDialog()
+
+
         Else
-            MessageBox.Show("Usuario o contraseña incorrectos")
+            MessageBox.Show("Usuario o contrasena incorrectos")
 
         End If
     End Sub

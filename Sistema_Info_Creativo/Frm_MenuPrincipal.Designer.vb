@@ -22,6 +22,7 @@ Partial Class Frm_MenuPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.AplicacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReiniciarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,6 +42,10 @@ Partial Class Frm_MenuPrincipal
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManualDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.lblfecha = New System.Windows.Forms.Label()
+        Me.lblhora = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -159,20 +164,65 @@ Partial Class Frm_MenuPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(953, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(953, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'lblfecha
+        '
+        Me.lblfecha.AutoSize = True
+        Me.lblfecha.BackColor = System.Drawing.Color.Transparent
+        Me.lblfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfecha.Location = New System.Drawing.Point(455, 202)
+        Me.lblfecha.Name = "lblfecha"
+        Me.lblfecha.Size = New System.Drawing.Size(54, 32)
+        Me.lblfecha.TabIndex = 1
+        Me.lblfecha.Text = "----"
+        '
+        'lblhora
+        '
+        Me.lblhora.AutoSize = True
+        Me.lblhora.BackColor = System.Drawing.Color.Transparent
+        Me.lblhora.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblhora.Location = New System.Drawing.Point(455, 259)
+        Me.lblhora.Name = "lblhora"
+        Me.lblhora.Size = New System.Drawing.Size(49, 29)
+        Me.lblhora.TabIndex = 2
+        Me.lblhora.Text = "----"
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Lucida Fax", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(455, 100)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(286, 43)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "¡BIENVENIDO!"
         '
         'Frm_MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._20230710_230701_0000
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(953, 488)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblhora)
+        Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Frm_MenuPrincipal"
         Me.Text = "Frm_MenuPrincipal"
@@ -201,4 +251,8 @@ Partial Class Frm_MenuPrincipal
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManualDeUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents lblfecha As Label
+    Friend WithEvents lblhora As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
 End Class
