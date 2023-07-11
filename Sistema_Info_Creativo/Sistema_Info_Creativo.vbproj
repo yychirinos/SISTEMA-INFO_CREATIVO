@@ -142,6 +142,12 @@
     <Compile Include="FrmVentas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_MenuPrincipal.Designer.vb">
+      <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MenuPrincipal.resx">
+      <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
