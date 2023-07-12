@@ -95,6 +95,8 @@ Public Class FrmUSUARIOS
 
     Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
         Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
+
 
     End Sub
 

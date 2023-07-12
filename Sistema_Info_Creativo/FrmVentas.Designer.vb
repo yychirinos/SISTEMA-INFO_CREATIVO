@@ -50,7 +50,7 @@ Partial Class FrmVentas
         Me.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1219, 80)
         Me.Panel1.TabIndex = 73
@@ -271,7 +271,7 @@ Partial Class FrmVentas
         Me.Controls.Add(Me.SUPTOTAL)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmVentas"
         Me.Text = "FrmVentas"
         Me.Panel1.ResumeLayout(False)

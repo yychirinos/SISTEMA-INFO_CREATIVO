@@ -32,6 +32,8 @@ Public Class FrmProveedores
 
         If resultado = DialogResult.Yes Then
             Me.Dispose()
+            Frm_MenuPrincipal.ShowDialog()
+
         End If
     End Sub
 

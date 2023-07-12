@@ -156,6 +156,8 @@ Public Class FrmEmpleados
 
     Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
         Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
+
     End Sub
 
     Private Sub FrmEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load

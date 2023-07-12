@@ -138,7 +138,7 @@ Public Class Frm_MenuPrincipal
 
     Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
         Me.Dispose()
-        FrmProveedores.ShowDialog()
+        FrmAgregarProveedor.ShowDialog()
     End Sub
 
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
@@ -148,7 +148,7 @@ Public Class Frm_MenuPrincipal
 
     Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
         Me.Dispose()
-        FrmCompras9.ShowDialog()
+        FrmCompras.ShowDialog()
     End Sub
 End Class
 

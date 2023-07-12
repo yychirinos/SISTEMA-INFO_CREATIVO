@@ -146,6 +146,7 @@ Public Class FrmCompras
 
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
     End Sub
 
     Private Sub datagridcompras_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagridcompras.CellContentClick
