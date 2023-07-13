@@ -41,7 +41,7 @@ Public Class Frmlogin
     End Sub
 
     Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
-        Me.Dispose()
+        Application.Exit()
 
     End Sub
 End Class
