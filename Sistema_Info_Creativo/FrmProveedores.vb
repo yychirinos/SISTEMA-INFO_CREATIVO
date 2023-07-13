@@ -28,13 +28,8 @@ Public Class FrmProveedores
     End Sub
 
     Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
-        Dim resultado As DialogResult = MessageBox.Show("¿Está seguro que desea Salir de Proveedores?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-        If resultado = DialogResult.Yes Then
-            Me.Dispose()
-            Frm_MenuPrincipal.ShowDialog()
-
-        End If
+        Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
