@@ -150,5 +150,15 @@ Public Class Frm_MenuPrincipal
         Me.Dispose()
         FrmCompras.ShowDialog()
     End Sub
+
+    Private Sub ReiniciarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReiniciarToolStripMenuItem.Click
+        Application.Restart()
+
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Application.Exit()
+
+    End Sub
 End Class
 

@@ -21,7 +21,7 @@ Public Class Frmlogin
         con.Open()
         Dim reader As SqlClient.SqlDataReader
         Dim cmd As New SqlClient.SqlCommand("SELECT *
-                                             FROM USUARIOS
+                                             FROM REGISTROUSUARIO
                                              where idusuario='" & txtusuario.Text & "' and contrasena = '" & txtcontrasena.Text & "' and estadoactivo=1", con)
 
         reader = cmd.ExecuteReader
@@ -38,6 +38,11 @@ Public Class Frmlogin
             MessageBox.Show("Usuario o contrasena incorrectos")
 
         End If
+    End Sub
+
+    Private Sub btnsalir_Click(sender As Object, e As EventArgs) Handles btnsalir.Click
+        Me.Dispose()
+
     End Sub
 End Class
 
