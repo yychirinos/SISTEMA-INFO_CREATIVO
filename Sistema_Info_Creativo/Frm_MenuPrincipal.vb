@@ -51,7 +51,7 @@ Public Class Frm_MenuPrincipal
         con = New SqlClient.SqlConnection(SQLcon)
 
         con.Open()
-        Dim cmd As SqlCommand = New SqlCommand("SELECT nivelacceso, opcion, descripcion FROM Menu_APP where nivelacceso = '" & VariablesPublicas.nivelacceso & "'", con)
+        Dim cmd As SqlCommand = New SqlCommand("SELECT nivelacceso, opcion, descripcion FROM MenuApp where nivelacceso = '" & VariablesPublicas.nivelacceso & "'", con)
         cmd.CommandType = CommandType.Text
         cmd.Parameters.AddWithValue("@bandera", 1)
         cmd.Parameters.AddWithValue("@nivelacceso", VariablesPublicas.nivelacceso)
