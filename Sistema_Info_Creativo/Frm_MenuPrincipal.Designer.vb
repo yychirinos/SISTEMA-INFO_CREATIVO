@@ -53,113 +53,113 @@ Partial Class Frm_MenuPrincipal
         '
         Me.AplicacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReiniciarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.AplicacionToolStripMenuItem.Name = "AplicacionToolStripMenuItem"
-        Me.AplicacionToolStripMenuItem.Size = New System.Drawing.Size(93, 24)
+        Me.AplicacionToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.AplicacionToolStripMenuItem.Text = "Aplicacion"
         '
         'ReiniciarToolStripMenuItem
         '
         Me.ReiniciarToolStripMenuItem.Name = "ReiniciarToolStripMenuItem"
-        Me.ReiniciarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ReiniciarToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.ReiniciarToolStripMenuItem.Text = "Reiniciar"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'MantenimientoToolStripMenuItem
         '
         Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
-        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(174, 26)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'TransaccionesToolStripMenuItem
         '
         Me.TransaccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.InventarioToolStripMenuItem})
         Me.TransaccionesToolStripMenuItem.Name = "TransaccionesToolStripMenuItem"
-        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(114, 24)
+        Me.TransaccionesToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
         Me.TransaccionesToolStripMenuItem.Text = "Transacciones"
         '
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(158, 26)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VentasToolStripMenuItem.Text = "Facturacion"
         '
         'ComprasToolStripMenuItem
         '
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(158, 26)
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
         'InventarioToolStripMenuItem
         '
         Me.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
-        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(158, 26)
+        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InventarioToolStripMenuItem.Text = "Inventario"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VentasToolStripMenuItem1, Me.ComprasToolStripMenuItem1})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'VentasToolStripMenuItem1
         '
         Me.VentasToolStripMenuItem1.Name = "VentasToolStripMenuItem1"
-        Me.VentasToolStripMenuItem1.Size = New System.Drawing.Size(151, 26)
+        Me.VentasToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
         Me.VentasToolStripMenuItem1.Text = "Ventas"
         '
         'ComprasToolStripMenuItem1
         '
         Me.ComprasToolStripMenuItem1.Name = "ComprasToolStripMenuItem1"
-        Me.ComprasToolStripMenuItem1.Size = New System.Drawing.Size(151, 26)
+        Me.ComprasToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
         Me.ComprasToolStripMenuItem1.Text = "Compras"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualDeUsuarioToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'ManualDeUsuarioToolStripMenuItem
         '
         Me.ManualDeUsuarioToolStripMenuItem.Name = "ManualDeUsuarioToolStripMenuItem"
-        Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.ManualDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
         Me.ManualDeUsuarioToolStripMenuItem.Text = "Manual de Usuario."
         '
         'MenuStrip1
@@ -169,7 +169,8 @@ Partial Class Frm_MenuPrincipal
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AplicacionToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.TransaccionesToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(953, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(715, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -178,9 +179,10 @@ Partial Class Frm_MenuPrincipal
         Me.lblfecha.AutoSize = True
         Me.lblfecha.BackColor = System.Drawing.Color.Transparent
         Me.lblfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblfecha.Location = New System.Drawing.Point(455, 202)
+        Me.lblfecha.Location = New System.Drawing.Point(341, 164)
+        Me.lblfecha.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblfecha.Name = "lblfecha"
-        Me.lblfecha.Size = New System.Drawing.Size(54, 32)
+        Me.lblfecha.Size = New System.Drawing.Size(44, 26)
         Me.lblfecha.TabIndex = 1
         Me.lblfecha.Text = "----"
         '
@@ -189,9 +191,10 @@ Partial Class Frm_MenuPrincipal
         Me.lblhora.AutoSize = True
         Me.lblhora.BackColor = System.Drawing.Color.Transparent
         Me.lblhora.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblhora.Location = New System.Drawing.Point(455, 259)
+        Me.lblhora.Location = New System.Drawing.Point(341, 210)
+        Me.lblhora.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblhora.Name = "lblhora"
-        Me.lblhora.Size = New System.Drawing.Size(49, 29)
+        Me.lblhora.Size = New System.Drawing.Size(38, 24)
         Me.lblhora.TabIndex = 2
         Me.lblhora.Text = "----"
         '
@@ -205,25 +208,27 @@ Partial Class Frm_MenuPrincipal
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Lucida Fax", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(455, 100)
+        Me.Label1.Location = New System.Drawing.Point(341, 81)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(286, 43)
+        Me.Label1.Size = New System.Drawing.Size(232, 36)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "¡BIENVENIDO!"
         '
         'Frm_MenuPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._20230710_230701_0000
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(953, 488)
+        Me.ClientSize = New System.Drawing.Size(715, 396)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblhora)
         Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Frm_MenuPrincipal"
         Me.Text = "Frm_MenuPrincipal"
         Me.MenuStrip1.ResumeLayout(False)
