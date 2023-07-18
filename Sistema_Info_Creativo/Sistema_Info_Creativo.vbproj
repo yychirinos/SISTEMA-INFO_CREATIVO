@@ -106,10 +106,20 @@
     <Compile Include="FrmCompras.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmDetalleVenta.Designer.vb">
+      <DependentUpon>FrmDetalleVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetalleVenta.vb" />
     <Compile Include="FrmEmpleados.Designer.vb">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturaVentas.Designer.vb">
+      <DependentUpon>FrmFacturaVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturaVentas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLOGIN1.Designer.vb">
@@ -176,8 +186,14 @@
     <EmbeddedResource Include="FrmCompras.resx">
       <DependentUpon>FrmCompras.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleVenta.resx">
+      <DependentUpon>FrmDetalleVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturaVentas.resx">
+      <DependentUpon>FrmFacturaVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLOGIN1.resx">
       <DependentUpon>FrmLOGIN1.vb</DependentUpon>
