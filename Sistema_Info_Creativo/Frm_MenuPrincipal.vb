@@ -160,5 +160,10 @@ Public Class Frm_MenuPrincipal
         Application.Exit()
 
     End Sub
+
+    Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManualDeUsuarioToolStripMenuItem.Click
+        Me.Dispose()
+        FrmManual.ShowDialog()
+    End Sub
 End Class
 
