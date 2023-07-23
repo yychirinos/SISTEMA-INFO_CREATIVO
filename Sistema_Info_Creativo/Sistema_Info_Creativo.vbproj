@@ -11,7 +11,7 @@
     <AssemblyName>Sistema_Info_Creativo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
@@ -106,10 +106,6 @@
     <Compile Include="FrmCompras.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDetalleVenta.Designer.vb">
-      <DependentUpon>FrmDetalleVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDetalleVenta.vb" />
     <Compile Include="FrmEmpleados.Designer.vb">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
     </Compile>
@@ -191,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCompras.resx">
       <DependentUpon>FrmCompras.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDetalleVenta.resx">
-      <DependentUpon>FrmDetalleVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
