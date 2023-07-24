@@ -129,6 +129,13 @@ Public Class Frm_MenuPrincipal
         FrmClientes.ShowDialog()
 
     End Sub
+    Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
+        Me.Dispose()
+        Productos.ShowDialog()
+
+    End Sub
+
+
 
     Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
         Me.Dispose()
