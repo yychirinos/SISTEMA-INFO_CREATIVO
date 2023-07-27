@@ -31,6 +31,8 @@ Partial Public Class InfoCreativosDataSet
     
     Private tableEMPLEADOS As EMPLEADOSDataTable
     
+    Private tableINVENTARIO As INVENTARIODataTable
+    
     Private tableListadoEstadoCivil As ListadoEstadoCivilDataTable
     
     Private tableListadoSexos As ListadoSexosDataTable
@@ -46,6 +48,8 @@ Partial Public Class InfoCreativosDataSet
     Private tableSP_CLIENTES As SP_CLIENTESDataTable
     
     Private tablesp_compras As sp_comprasDataTable
+    
+    Private tablesp_INVENTARIO As sp_INVENTARIODataTable
     
     Private tablesp_Productos As sp_ProductosDataTable
     
@@ -89,6 +93,9 @@ Partial Public Class InfoCreativosDataSet
             If (Not (ds.Tables("EMPLEADOS")) Is Nothing) Then
                 MyBase.Tables.Add(New EMPLEADOSDataTable(ds.Tables("EMPLEADOS")))
             End If
+            If (Not (ds.Tables("INVENTARIO")) Is Nothing) Then
+                MyBase.Tables.Add(New INVENTARIODataTable(ds.Tables("INVENTARIO")))
+            End If
             If (Not (ds.Tables("ListadoEstadoCivil")) Is Nothing) Then
                 MyBase.Tables.Add(New ListadoEstadoCivilDataTable(ds.Tables("ListadoEstadoCivil")))
             End If
@@ -112,6 +119,9 @@ Partial Public Class InfoCreativosDataSet
             End If
             If (Not (ds.Tables("sp_compras")) Is Nothing) Then
                 MyBase.Tables.Add(New sp_comprasDataTable(ds.Tables("sp_compras")))
+            End If
+            If (Not (ds.Tables("sp_INVENTARIO")) Is Nothing) Then
+                MyBase.Tables.Add(New sp_INVENTARIODataTable(ds.Tables("sp_INVENTARIO")))
             End If
             If (Not (ds.Tables("sp_Productos")) Is Nothing) Then
                 MyBase.Tables.Add(New sp_ProductosDataTable(ds.Tables("sp_Productos")))
@@ -163,6 +173,16 @@ Partial Public Class InfoCreativosDataSet
     Public ReadOnly Property EMPLEADOS() As EMPLEADOSDataTable
         Get
             Return Me.tableEMPLEADOS
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property INVENTARIO() As INVENTARIODataTable
+        Get
+            Return Me.tableINVENTARIO
         End Get
     End Property
     
@@ -243,6 +263,16 @@ Partial Public Class InfoCreativosDataSet
     Public ReadOnly Property sp_compras() As sp_comprasDataTable
         Get
             Return Me.tablesp_compras
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property sp_INVENTARIO() As sp_INVENTARIODataTable
+        Get
+            Return Me.tablesp_INVENTARIO
         End Get
     End Property
     
@@ -342,6 +372,9 @@ Partial Public Class InfoCreativosDataSet
             If (Not (ds.Tables("EMPLEADOS")) Is Nothing) Then
                 MyBase.Tables.Add(New EMPLEADOSDataTable(ds.Tables("EMPLEADOS")))
             End If
+            If (Not (ds.Tables("INVENTARIO")) Is Nothing) Then
+                MyBase.Tables.Add(New INVENTARIODataTable(ds.Tables("INVENTARIO")))
+            End If
             If (Not (ds.Tables("ListadoEstadoCivil")) Is Nothing) Then
                 MyBase.Tables.Add(New ListadoEstadoCivilDataTable(ds.Tables("ListadoEstadoCivil")))
             End If
@@ -365,6 +398,9 @@ Partial Public Class InfoCreativosDataSet
             End If
             If (Not (ds.Tables("sp_compras")) Is Nothing) Then
                 MyBase.Tables.Add(New sp_comprasDataTable(ds.Tables("sp_compras")))
+            End If
+            If (Not (ds.Tables("sp_INVENTARIO")) Is Nothing) Then
+                MyBase.Tables.Add(New sp_INVENTARIODataTable(ds.Tables("sp_INVENTARIO")))
             End If
             If (Not (ds.Tables("sp_Productos")) Is Nothing) Then
                 MyBase.Tables.Add(New sp_ProductosDataTable(ds.Tables("sp_Productos")))
@@ -422,6 +458,12 @@ Partial Public Class InfoCreativosDataSet
                 Me.tableEMPLEADOS.InitVars
             End If
         End If
+        Me.tableINVENTARIO = CType(MyBase.Tables("INVENTARIO"),INVENTARIODataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableINVENTARIO) Is Nothing) Then
+                Me.tableINVENTARIO.InitVars
+            End If
+        End If
         Me.tableListadoEstadoCivil = CType(MyBase.Tables("ListadoEstadoCivil"),ListadoEstadoCivilDataTable)
         If (initTable = true) Then
             If (Not (Me.tableListadoEstadoCivil) Is Nothing) Then
@@ -470,6 +512,12 @@ Partial Public Class InfoCreativosDataSet
                 Me.tablesp_compras.InitVars
             End If
         End If
+        Me.tablesp_INVENTARIO = CType(MyBase.Tables("sp_INVENTARIO"),sp_INVENTARIODataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablesp_INVENTARIO) Is Nothing) Then
+                Me.tablesp_INVENTARIO.InitVars
+            End If
+        End If
         Me.tablesp_Productos = CType(MyBase.Tables("sp_Productos"),sp_ProductosDataTable)
         If (initTable = true) Then
             If (Not (Me.tablesp_Productos) Is Nothing) Then
@@ -498,6 +546,8 @@ Partial Public Class InfoCreativosDataSet
         MyBase.Tables.Add(Me.tablecompras)
         Me.tableEMPLEADOS = New EMPLEADOSDataTable()
         MyBase.Tables.Add(Me.tableEMPLEADOS)
+        Me.tableINVENTARIO = New INVENTARIODataTable()
+        MyBase.Tables.Add(Me.tableINVENTARIO)
         Me.tableListadoEstadoCivil = New ListadoEstadoCivilDataTable()
         MyBase.Tables.Add(Me.tableListadoEstadoCivil)
         Me.tableListadoSexos = New ListadoSexosDataTable()
@@ -514,6 +564,8 @@ Partial Public Class InfoCreativosDataSet
         MyBase.Tables.Add(Me.tableSP_CLIENTES)
         Me.tablesp_compras = New sp_comprasDataTable()
         MyBase.Tables.Add(Me.tablesp_compras)
+        Me.tablesp_INVENTARIO = New sp_INVENTARIODataTable()
+        MyBase.Tables.Add(Me.tablesp_INVENTARIO)
         Me.tablesp_Productos = New sp_ProductosDataTable()
         MyBase.Tables.Add(Me.tablesp_Productos)
         Me.tablesp_Proveedores = New sp_ProveedoresDataTable()
@@ -535,6 +587,12 @@ Partial Public Class InfoCreativosDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeEMPLEADOS() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeINVENTARIO() As Boolean
         Return false
     End Function
     
@@ -583,6 +641,12 @@ Partial Public Class InfoCreativosDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializesp_compras() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializesp_INVENTARIO() As Boolean
         Return false
     End Function
     
@@ -666,6 +730,9 @@ Partial Public Class InfoCreativosDataSet
     Public Delegate Sub EMPLEADOSRowChangeEventHandler(ByVal sender As Object, ByVal e As EMPLEADOSRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub INVENTARIORowChangeEventHandler(ByVal sender As Object, ByVal e As INVENTARIORowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub ListadoEstadoCivilRowChangeEventHandler(ByVal sender As Object, ByVal e As ListadoEstadoCivilRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -688,6 +755,9 @@ Partial Public Class InfoCreativosDataSet
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub sp_comprasRowChangeEventHandler(ByVal sender As Object, ByVal e As sp_comprasRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub sp_INVENTARIORowChangeEventHandler(ByVal sender As Object, ByVal e As sp_INVENTARIORowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub sp_ProductosRowChangeEventHandler(ByVal sender As Object, ByVal e As sp_ProductosRowChangeEvent)
@@ -1839,6 +1909,328 @@ Partial Public Class InfoCreativosDataSet
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "EMPLEADOSDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class INVENTARIODataTable
+        Inherits Global.System.Data.TypedTableBase(Of INVENTARIORow)
+        
+        Private columnid_inventario As Global.System.Data.DataColumn
+        
+        Private columnId_Producto As Global.System.Data.DataColumn
+        
+        Private columnNombre_Producto As Global.System.Data.DataColumn
+        
+        Private columnStock As Global.System.Data.DataColumn
+        
+        Private columnFecha_Registro As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "INVENTARIO"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_inventarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_inventario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Id_ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnId_Producto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Nombre_ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombre_Producto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property StockColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnStock
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Fecha_RegistroColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFecha_Registro
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As INVENTARIORow
+            Get
+                Return CType(Me.Rows(index),INVENTARIORow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event INVENTARIORowChanging As INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event INVENTARIORowChanged As INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event INVENTARIORowDeleting As INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event INVENTARIORowDeleted As INVENTARIORowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddINVENTARIORow(ByVal row As INVENTARIORow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddINVENTARIORow(ByVal Id_Producto As Integer, ByVal Nombre_Producto As String, ByVal Stock As Integer, ByVal Fecha_Registro As Date) As INVENTARIORow
+            Dim rowINVENTARIORow As INVENTARIORow = CType(Me.NewRow,INVENTARIORow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Id_Producto, Nombre_Producto, Stock, Fecha_Registro}
+            rowINVENTARIORow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowINVENTARIORow)
+            Return rowINVENTARIORow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByid_inventario(ByVal id_inventario As Integer) As INVENTARIORow
+            Return CType(Me.Rows.Find(New Object() {id_inventario}),INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As INVENTARIODataTable = CType(MyBase.Clone,INVENTARIODataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New INVENTARIODataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_inventario = MyBase.Columns("id_inventario")
+            Me.columnId_Producto = MyBase.Columns("Id_Producto")
+            Me.columnNombre_Producto = MyBase.Columns("Nombre_Producto")
+            Me.columnStock = MyBase.Columns("Stock")
+            Me.columnFecha_Registro = MyBase.Columns("Fecha_Registro")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_inventario = New Global.System.Data.DataColumn("id_inventario", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_inventario)
+            Me.columnId_Producto = New Global.System.Data.DataColumn("Id_Producto", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnId_Producto)
+            Me.columnNombre_Producto = New Global.System.Data.DataColumn("Nombre_Producto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombre_Producto)
+            Me.columnStock = New Global.System.Data.DataColumn("Stock", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnStock)
+            Me.columnFecha_Registro = New Global.System.Data.DataColumn("Fecha_Registro", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha_Registro)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_inventario}, true))
+            Me.columnid_inventario.AutoIncrement = true
+            Me.columnid_inventario.AutoIncrementSeed = -1
+            Me.columnid_inventario.AutoIncrementStep = -1
+            Me.columnid_inventario.AllowDBNull = false
+            Me.columnid_inventario.ReadOnly = true
+            Me.columnid_inventario.Unique = true
+            Me.columnId_Producto.AllowDBNull = false
+            Me.columnNombre_Producto.AllowDBNull = false
+            Me.columnNombre_Producto.MaxLength = 20
+            Me.columnStock.AllowDBNull = false
+            Me.columnFecha_Registro.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewINVENTARIORow() As INVENTARIORow
+            Return CType(Me.NewRow,INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New INVENTARIORow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.INVENTARIORowChangedEvent) Is Nothing) Then
+                RaiseEvent INVENTARIORowChanged(Me, New INVENTARIORowChangeEvent(CType(e.Row,INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.INVENTARIORowChangingEvent) Is Nothing) Then
+                RaiseEvent INVENTARIORowChanging(Me, New INVENTARIORowChangeEvent(CType(e.Row,INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.INVENTARIORowDeletedEvent) Is Nothing) Then
+                RaiseEvent INVENTARIORowDeleted(Me, New INVENTARIORowChangeEvent(CType(e.Row,INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.INVENTARIORowDeletingEvent) Is Nothing) Then
+                RaiseEvent INVENTARIORowDeleting(Me, New INVENTARIORowChangeEvent(CType(e.Row,INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveINVENTARIORow(ByVal row As INVENTARIORow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As InfoCreativosDataSet = New InfoCreativosDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "INVENTARIODataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -4547,6 +4939,326 @@ Partial Public Class InfoCreativosDataSet
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class sp_INVENTARIODataTable
+        Inherits Global.System.Data.TypedTableBase(Of sp_INVENTARIORow)
+        
+        Private columnid_inventario As Global.System.Data.DataColumn
+        
+        Private columnId_Producto As Global.System.Data.DataColumn
+        
+        Private columnNombre_Producto As Global.System.Data.DataColumn
+        
+        Private columnStock As Global.System.Data.DataColumn
+        
+        Private columnFecha_Registro As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "sp_INVENTARIO"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property id_inventarioColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_inventario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Id_ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnId_Producto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Nombre_ProductoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombre_Producto
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property StockColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnStock
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Fecha_RegistroColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFecha_Registro
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As sp_INVENTARIORow
+            Get
+                Return CType(Me.Rows(index),sp_INVENTARIORow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event sp_INVENTARIORowChanging As sp_INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event sp_INVENTARIORowChanged As sp_INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event sp_INVENTARIORowDeleting As sp_INVENTARIORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event sp_INVENTARIORowDeleted As sp_INVENTARIORowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub Addsp_INVENTARIORow(ByVal row As sp_INVENTARIORow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function Addsp_INVENTARIORow(ByVal Id_Producto As Integer, ByVal Nombre_Producto As String, ByVal Stock As Integer, ByVal Fecha_Registro As Date) As sp_INVENTARIORow
+            Dim rowsp_INVENTARIORow As sp_INVENTARIORow = CType(Me.NewRow,sp_INVENTARIORow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Id_Producto, Nombre_Producto, Stock, Fecha_Registro}
+            rowsp_INVENTARIORow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowsp_INVENTARIORow)
+            Return rowsp_INVENTARIORow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByid_inventario(ByVal id_inventario As Integer) As sp_INVENTARIORow
+            Return CType(Me.Rows.Find(New Object() {id_inventario}),sp_INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As sp_INVENTARIODataTable = CType(MyBase.Clone,sp_INVENTARIODataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New sp_INVENTARIODataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnid_inventario = MyBase.Columns("id_inventario")
+            Me.columnId_Producto = MyBase.Columns("Id_Producto")
+            Me.columnNombre_Producto = MyBase.Columns("Nombre_Producto")
+            Me.columnStock = MyBase.Columns("Stock")
+            Me.columnFecha_Registro = MyBase.Columns("Fecha_Registro")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnid_inventario = New Global.System.Data.DataColumn("id_inventario", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_inventario)
+            Me.columnId_Producto = New Global.System.Data.DataColumn("Id_Producto", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnId_Producto)
+            Me.columnNombre_Producto = New Global.System.Data.DataColumn("Nombre_Producto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombre_Producto)
+            Me.columnStock = New Global.System.Data.DataColumn("Stock", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnStock)
+            Me.columnFecha_Registro = New Global.System.Data.DataColumn("Fecha_Registro", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha_Registro)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_inventario}, true))
+            Me.columnid_inventario.AutoIncrement = true
+            Me.columnid_inventario.AllowDBNull = false
+            Me.columnid_inventario.ReadOnly = true
+            Me.columnid_inventario.Unique = true
+            Me.columnId_Producto.AllowDBNull = false
+            Me.columnNombre_Producto.AllowDBNull = false
+            Me.columnNombre_Producto.MaxLength = 20
+            Me.columnStock.AllowDBNull = false
+            Me.columnFecha_Registro.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Newsp_INVENTARIORow() As sp_INVENTARIORow
+            Return CType(Me.NewRow,sp_INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New sp_INVENTARIORow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(sp_INVENTARIORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.sp_INVENTARIORowChangedEvent) Is Nothing) Then
+                RaiseEvent sp_INVENTARIORowChanged(Me, New sp_INVENTARIORowChangeEvent(CType(e.Row,sp_INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.sp_INVENTARIORowChangingEvent) Is Nothing) Then
+                RaiseEvent sp_INVENTARIORowChanging(Me, New sp_INVENTARIORowChangeEvent(CType(e.Row,sp_INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.sp_INVENTARIORowDeletedEvent) Is Nothing) Then
+                RaiseEvent sp_INVENTARIORowDeleted(Me, New sp_INVENTARIORowChangeEvent(CType(e.Row,sp_INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.sp_INVENTARIORowDeletingEvent) Is Nothing) Then
+                RaiseEvent sp_INVENTARIORowDeleting(Me, New sp_INVENTARIORowChangeEvent(CType(e.Row,sp_INVENTARIORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Removesp_INVENTARIORow(ByVal row As sp_INVENTARIORow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As InfoCreativosDataSet = New InfoCreativosDataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "sp_INVENTARIODataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class sp_ProductosDataTable
         Inherits Global.System.Data.TypedTableBase(Of sp_ProductosRow)
         
@@ -5799,6 +6511,77 @@ Partial Public Class InfoCreativosDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
+    Partial Public Class INVENTARIORow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableINVENTARIO As INVENTARIODataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableINVENTARIO = CType(Me.Table,INVENTARIODataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_inventario() As Integer
+            Get
+                Return CType(Me(Me.tableINVENTARIO.id_inventarioColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableINVENTARIO.id_inventarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Id_Producto() As Integer
+            Get
+                Return CType(Me(Me.tableINVENTARIO.Id_ProductoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableINVENTARIO.Id_ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Nombre_Producto() As String
+            Get
+                Return CType(Me(Me.tableINVENTARIO.Nombre_ProductoColumn),String)
+            End Get
+            Set
+                Me(Me.tableINVENTARIO.Nombre_ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Stock() As Integer
+            Get
+                Return CType(Me(Me.tableINVENTARIO.StockColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableINVENTARIO.StockColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Fecha_Registro() As Date
+            Get
+                Return CType(Me(Me.tableINVENTARIO.Fecha_RegistroColumn),Date)
+            End Get
+            Set
+                Me(Me.tableINVENTARIO.Fecha_RegistroColumn) = value
+            End Set
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
     Partial Public Class ListadoEstadoCivilRow
         Inherits Global.System.Data.DataRow
         
@@ -6573,6 +7356,77 @@ Partial Public Class InfoCreativosDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
+    Partial Public Class sp_INVENTARIORow
+        Inherits Global.System.Data.DataRow
+        
+        Private tablesp_INVENTARIO As sp_INVENTARIODataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tablesp_INVENTARIO = CType(Me.Table,sp_INVENTARIODataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property id_inventario() As Integer
+            Get
+                Return CType(Me(Me.tablesp_INVENTARIO.id_inventarioColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablesp_INVENTARIO.id_inventarioColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Id_Producto() As Integer
+            Get
+                Return CType(Me(Me.tablesp_INVENTARIO.Id_ProductoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablesp_INVENTARIO.Id_ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Nombre_Producto() As String
+            Get
+                Return CType(Me(Me.tablesp_INVENTARIO.Nombre_ProductoColumn),String)
+            End Get
+            Set
+                Me(Me.tablesp_INVENTARIO.Nombre_ProductoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Stock() As Integer
+            Get
+                Return CType(Me(Me.tablesp_INVENTARIO.StockColumn),Integer)
+            End Get
+            Set
+                Me(Me.tablesp_INVENTARIO.StockColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Fecha_Registro() As Date
+            Get
+                Return CType(Me(Me.tablesp_INVENTARIO.Fecha_RegistroColumn),Date)
+            End Get
+            Set
+                Me(Me.tablesp_INVENTARIO.Fecha_RegistroColumn) = value
+            End Set
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
     Partial Public Class sp_ProductosRow
         Inherits Global.System.Data.DataRow
         
@@ -6912,6 +7766,42 @@ Partial Public Class InfoCreativosDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class INVENTARIORowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As INVENTARIORow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As INVENTARIORow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As INVENTARIORow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Class ListadoEstadoCivilRowChangeEvent
         Inherits Global.System.EventArgs
         
@@ -7182,6 +8072,42 @@ Partial Public Class InfoCreativosDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As sp_comprasRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class sp_INVENTARIORowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As sp_INVENTARIORow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As sp_INVENTARIORow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As sp_INVENTARIORow
             Get
                 Return Me.eventRow
             End Get
@@ -8505,6 +9431,358 @@ Namespace InfoCreativosDataSetTableAdapters
                     ByVal Original_activo As Boolean,  _
                     ByVal Original_fecharegistro As Date) As Integer
             Return Me.Update(Original_numempleado, dni, nombres, apellidos, telefono, correo, direccion, cargo, sexo, estadocivil, nivelacademico, fechanac, activo, fecharegistro, Original_numempleado, Original_dni, Original_nombres, Original_apellidos, Original_telefono, Original_correo, Original_direccion, Original_cargo, Original_sexo, Original_estadocivil, Original_nivelacademico, Original_fechanac, Original_activo, Original_fecharegistro)
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class INVENTARIOTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "INVENTARIO"
+            tableMapping.ColumnMappings.Add("id_inventario", "id_inventario")
+            tableMapping.ColumnMappings.Add("Id_Producto", "Id_Producto")
+            tableMapping.ColumnMappings.Add("Nombre_Producto", "Nombre_Producto")
+            tableMapping.ColumnMappings.Add("Stock", "Stock")
+            tableMapping.ColumnMappings.Add("Fecha_Registro", "Fecha_Registro")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[INVENTARIO] WHERE (([id_inventario] = @Original_id_inventario)"& _ 
+                " AND ([Id_Producto] = @Original_Id_Producto) AND ([Nombre_Producto] = @Original_"& _ 
+                "Nombre_Producto) AND ([Stock] = @Original_Stock) AND ([Fecha_Registro] = @Origin"& _ 
+                "al_Fecha_Registro))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_inventario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_inventario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre_Producto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Producto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Stock", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Stock", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Registro", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Registro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[INVENTARIO] ([Id_Producto], [Nombre_Producto], [Stock], [Fecha"& _ 
+                "_Registro]) VALUES (@Id_Producto, @Nombre_Producto, @Stock, @Fecha_Registro);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
+                "ELECT id_inventario, Id_Producto, Nombre_Producto, Stock, Fecha_Registro FROM IN"& _ 
+                "VENTARIO WHERE (id_inventario = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Producto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Stock", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Stock", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Registro", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Registro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[INVENTARIO] SET [Id_Producto] = @Id_Producto, [Nombre_Producto] = @"& _ 
+                "Nombre_Producto, [Stock] = @Stock, [Fecha_Registro] = @Fecha_Registro WHERE (([i"& _ 
+                "d_inventario] = @Original_id_inventario) AND ([Id_Producto] = @Original_Id_Produ"& _ 
+                "cto) AND ([Nombre_Producto] = @Original_Nombre_Producto) AND ([Stock] = @Origina"& _ 
+                "l_Stock) AND ([Fecha_Registro] = @Original_Fecha_Registro));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_inventar"& _ 
+                "io, Id_Producto, Nombre_Producto, Stock, Fecha_Registro FROM INVENTARIO WHERE (i"& _ 
+                "d_inventario = @id_inventario)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Producto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Producto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Stock", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Stock", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Registro", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Registro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_inventario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_inventario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Producto", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre_Producto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Producto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Stock", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Stock", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Registro", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Registro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_inventario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_inventario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.Sistema_Info_Creativo.My.MySettings.Default.INFO_CREATIVO
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT id_inventario, Id_Producto, Nombre_Producto, Stock, Fecha_Registro FROM db"& _ 
+                "o.INVENTARIO"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As InfoCreativosDataSet.INVENTARIODataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As InfoCreativosDataSet.INVENTARIODataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As InfoCreativosDataSet.INVENTARIODataTable = New InfoCreativosDataSet.INVENTARIODataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As InfoCreativosDataSet.INVENTARIODataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As InfoCreativosDataSet) As Integer
+            Return Me.Adapter.Update(dataSet, "INVENTARIO")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_id_inventario As Integer, ByVal Original_Id_Producto As Integer, ByVal Original_Nombre_Producto As String, ByVal Original_Stock As Integer, ByVal Original_Fecha_Registro As Date) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_id_inventario,Integer)
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Id_Producto,Integer)
+            If (Original_Nombre_Producto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Nombre_Producto")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Nombre_Producto,String)
+            End If
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Stock,Integer)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Fecha_Registro,Date)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal Id_Producto As Integer, ByVal Nombre_Producto As String, ByVal Stock As Integer, ByVal Fecha_Registro As Date) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id_Producto,Integer)
+            If (Nombre_Producto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre_Producto")
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Nombre_Producto,String)
+            End If
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(Stock,Integer)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(Fecha_Registro,Date)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal Id_Producto As Integer, ByVal Nombre_Producto As String, ByVal Stock As Integer, ByVal Fecha_Registro As Date, ByVal Original_id_inventario As Integer, ByVal Original_Id_Producto As Integer, ByVal Original_Nombre_Producto As String, ByVal Original_Stock As Integer, ByVal Original_Fecha_Registro As Date, ByVal id_inventario As Integer) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id_Producto,Integer)
+            If (Nombre_Producto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre_Producto")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Nombre_Producto,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Stock,Integer)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Fecha_Registro,Date)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_id_inventario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Id_Producto,Integer)
+            If (Original_Nombre_Producto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Nombre_Producto")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Nombre_Producto,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Stock,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Fecha_Registro,Date)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(id_inventario,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal Id_Producto As Integer, ByVal Nombre_Producto As String, ByVal Stock As Integer, ByVal Fecha_Registro As Date, ByVal Original_id_inventario As Integer, ByVal Original_Id_Producto As Integer, ByVal Original_Nombre_Producto As String, ByVal Original_Stock As Integer, ByVal Original_Fecha_Registro As Date) As Integer
+            Return Me.Update(Id_Producto, Nombre_Producto, Stock, Fecha_Registro, Original_id_inventario, Original_Id_Producto, Original_Nombre_Producto, Original_Stock, Original_Fecha_Registro, Original_id_inventario)
         End Function
     End Class
     
@@ -11237,6 +12515,250 @@ Namespace InfoCreativosDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class sp_INVENTARIOTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "sp_INVENTARIO"
+            tableMapping.ColumnMappings.Add("id_inventario", "id_inventario")
+            tableMapping.ColumnMappings.Add("Id_Producto", "Id_Producto")
+            tableMapping.ColumnMappings.Add("Nombre_Producto", "Nombre_Producto")
+            tableMapping.ColumnMappings.Add("Stock", "Stock")
+            tableMapping.ColumnMappings.Add("Fecha_Registro", "Fecha_Registro")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.Sistema_Info_Creativo.My.MySettings.Default.INFO_CREATIVO
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "dbo.sp_INVENTARIO"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.StoredProcedure
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bandera", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_inventario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Producto", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Stock", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Registro", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As InfoCreativosDataSet.sp_INVENTARIODataTable, ByVal Bandera As Global.System.Nullable(Of Integer), ByVal id_inventario As Global.System.Nullable(Of Integer), ByVal Id_Producto As Global.System.Nullable(Of Integer), ByVal Nombre_Producto As String, ByVal Stock As Global.System.Nullable(Of Integer), ByVal Fecha_Registro As Global.System.Nullable(Of Date)) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Bandera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Bandera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (id_inventario.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(id_inventario.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id_Producto.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id_Producto.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Nombre_Producto Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Nombre_Producto,String)
+            End If
+            If (Stock.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Stock.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Fecha_Registro.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(Fecha_Registro.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal Bandera As Global.System.Nullable(Of Integer), ByVal id_inventario As Global.System.Nullable(Of Integer), ByVal Id_Producto As Global.System.Nullable(Of Integer), ByVal Nombre_Producto As String, ByVal Stock As Global.System.Nullable(Of Integer), ByVal Fecha_Registro As Global.System.Nullable(Of Date)) As InfoCreativosDataSet.sp_INVENTARIODataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Bandera.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Bandera.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (id_inventario.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(id_inventario.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Id_Producto.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(Id_Producto.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (Nombre_Producto Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(Nombre_Producto,String)
+            End If
+            If (Stock.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(Stock.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Fecha_Registro.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(6).Value = CType(Fecha_Registro.Value,Date)
+            Else
+                Me.Adapter.SelectCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Dim dataTable As InfoCreativosDataSet.sp_INVENTARIODataTable = New InfoCreativosDataSet.sp_INVENTARIODataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
     Partial Public Class sp_ProductosTableAdapter
         Inherits Global.System.ComponentModel.Component
         
@@ -11931,6 +13453,8 @@ Namespace InfoCreativosDataSetTableAdapters
         
         Private _eMPLEADOSTableAdapter As EMPLEADOSTableAdapter
         
+        Private _iNVENTARIOTableAdapter As INVENTARIOTableAdapter
+        
         Private _listadoEstadoCivilTableAdapter As ListadoEstadoCivilTableAdapter
         
         Private _listadoSexosTableAdapter As ListadoSexosTableAdapter
@@ -11997,6 +13521,20 @@ Namespace InfoCreativosDataSetTableAdapters
             End Get
             Set
                 Me._eMPLEADOSTableAdapter = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property INVENTARIOTableAdapter() As INVENTARIOTableAdapter
+            Get
+                Return Me._iNVENTARIOTableAdapter
+            End Get
+            Set
+                Me._iNVENTARIOTableAdapter = value
             End Set
         End Property
         
@@ -12115,6 +13653,10 @@ Namespace InfoCreativosDataSetTableAdapters
                             AndAlso (Not (Me._eMPLEADOSTableAdapter.Connection) Is Nothing)) Then
                     Return Me._eMPLEADOSTableAdapter.Connection
                 End If
+                If ((Not (Me._iNVENTARIOTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._iNVENTARIOTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._iNVENTARIOTableAdapter.Connection
+                End If
                 If ((Not (Me._listadoEstadoCivilTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._listadoEstadoCivilTableAdapter.Connection) Is Nothing)) Then
                     Return Me._listadoEstadoCivilTableAdapter.Connection
@@ -12159,6 +13701,9 @@ Namespace InfoCreativosDataSetTableAdapters
                     count = (count + 1)
                 End If
                 If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
+                If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._listadoEstadoCivilTableAdapter) Is Nothing) Then
@@ -12214,6 +13759,15 @@ Namespace InfoCreativosDataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._eMPLEADOSTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
+            If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.INVENTARIO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._iNVENTARIOTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -12302,6 +13856,14 @@ Namespace InfoCreativosDataSetTableAdapters
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._eMPLEADOSTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
+            If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.INVENTARIO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._iNVENTARIOTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -12411,6 +13973,14 @@ Namespace InfoCreativosDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
+            If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.INVENTARIO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._iNVENTARIOTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.EMPLEADOS.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -12488,6 +14058,11 @@ Namespace InfoCreativosDataSetTableAdapters
             End If
             If ((Not (Me._eMPLEADOSTableAdapter) Is Nothing)  _
                         AndAlso (Me.MatchTableAdapterConnection(Me._eMPLEADOSTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._iNVENTARIOTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._iNVENTARIOTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -12578,6 +14153,15 @@ Namespace InfoCreativosDataSetTableAdapters
                     If Me._eMPLEADOSTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._eMPLEADOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._eMPLEADOSTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._iNVENTARIOTableAdapter, Me._iNVENTARIOTableAdapter.Connection)
+                    Me._iNVENTARIOTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._iNVENTARIOTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._iNVENTARIOTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._iNVENTARIOTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._iNVENTARIOTableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._listadoEstadoCivilTableAdapter) Is Nothing) Then
@@ -12705,6 +14289,10 @@ Namespace InfoCreativosDataSetTableAdapters
                 If (Not (Me._eMPLEADOSTableAdapter) Is Nothing) Then
                     Me._eMPLEADOSTableAdapter.Connection = CType(revertConnections(Me._eMPLEADOSTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._eMPLEADOSTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._iNVENTARIOTableAdapter) Is Nothing) Then
+                    Me._iNVENTARIOTableAdapter.Connection = CType(revertConnections(Me._iNVENTARIOTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._iNVENTARIOTableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._listadoEstadoCivilTableAdapter) Is Nothing) Then
                     Me._listadoEstadoCivilTableAdapter.Connection = CType(revertConnections(Me._listadoEstadoCivilTableAdapter),Global.System.Data.SqlClient.SqlConnection)

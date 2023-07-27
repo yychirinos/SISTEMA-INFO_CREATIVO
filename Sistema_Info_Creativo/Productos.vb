@@ -107,7 +107,8 @@ Public Class Productos
 
     Private Sub SalirButton_Click(sender As Object, e As EventArgs) Handles Btnsalir.Click
 
-        Me.Close()
+        Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
     End Sub
 
     Private Sub LimpiarCampos()

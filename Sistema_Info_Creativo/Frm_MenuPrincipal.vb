@@ -135,7 +135,11 @@ Public Class Frm_MenuPrincipal
 
     End Sub
 
+    Private Sub InventarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioToolStripMenuItem.Click
+        Me.Dispose()
+        Inventario.ShowDialog()
 
+    End Sub
 
     Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
         Me.Dispose()

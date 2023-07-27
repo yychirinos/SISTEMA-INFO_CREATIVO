@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmAgregarProveedor
     Public Event ProveedorAgregado As EventHandler
-    Dim connectionString As String = "Data Source=HECTOR\SQLEXPRESS;Initial Catalog=proveedoresBD;Integrated Security=True"
+    Dim connectionString As String = "Data Source=DESKTOP-50ALDBO;Initial Catalog=InfoCreativos;Integrated Security=True"
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Dim resultado As DialogResult = MessageBox.Show("Salir sin agregar Proveedor?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -10,6 +10,7 @@ Public Class FrmAgregarProveedor
             Dim frmProveedores As FrmProveedores = DirectCast(Application.OpenForms("FrmProveedores"), FrmProveedores)
             frmProveedores.CargarProveedores()
             Me.Dispose()
+
         End If
     End Sub
 

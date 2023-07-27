@@ -165,6 +165,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InfoCreativosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Inventario.Designer.vb">
+      <DependentUpon>Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuPrincipal.resx">
       <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
