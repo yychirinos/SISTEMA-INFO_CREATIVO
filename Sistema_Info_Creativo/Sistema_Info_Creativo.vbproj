@@ -148,12 +148,6 @@
     <Compile Include="FrmUSUARIOS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVentas.Designer.vb">
-      <DependentUpon>FrmVentas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmVentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Frm_MenuPrincipal.Designer.vb">
       <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
     </Compile>
@@ -225,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUSUARIOS.resx">
       <DependentUpon>FrmUSUARIOS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentas.resx">
-      <DependentUpon>FrmVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuPrincipal.resx">
       <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
