@@ -63,9 +63,16 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -142,10 +149,22 @@
     <Compile Include="FrmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmReportesCompra.Designer.vb">
+      <DependentUpon>FrmReportesCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportesCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmUSUARIOS.Designer.vb">
       <DependentUpon>FrmUSUARIOS.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmUSUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentasRealizadas.Designer.vb">
+      <DependentUpon>FrmVentasRealizadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentasRealizadas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_MenuPrincipal.Designer.vb">
@@ -217,8 +236,14 @@
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportesCompra.resx">
+      <DependentUpon>FrmReportesCompra.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUSUARIOS.resx">
       <DependentUpon>FrmUSUARIOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentasRealizadas.resx">
+      <DependentUpon>FrmVentasRealizadas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuPrincipal.resx">
       <DependentUpon>Frm_MenuPrincipal.vb</DependentUpon>
@@ -260,6 +285,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\5c790123003fa702a1d2795b.png" />
   </ItemGroup>
   <ItemGroup>
@@ -384,6 +410,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\20230710_230701_0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

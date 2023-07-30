@@ -94,9 +94,9 @@ Partial Class FrmEmpleados
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(62, 81)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(542, 186)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -106,7 +106,7 @@ Partial Class FrmEmpleados
         '
         Me.PictureBox1.Image = Global.Sistema_Info_Creativo.My.Resources.Resources._327527
         Me.PictureBox1.Location = New System.Drawing.Point(375, 35)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(86, 110)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -119,7 +119,7 @@ Partial Class FrmEmpleados
         Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
         Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnbuscar.Location = New System.Drawing.Point(206, 23)
-        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnbuscar.Name = "btnbuscar"
         Me.btnbuscar.Size = New System.Drawing.Size(22, 21)
         Me.btnbuscar.TabIndex = 12
@@ -130,7 +130,7 @@ Partial Class FrmEmpleados
         Me.cmbsexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbsexo.FormattingEnabled = True
         Me.cmbsexo.Location = New System.Drawing.Point(115, 152)
-        Me.cmbsexo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbsexo.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbsexo.Name = "cmbsexo"
         Me.cmbsexo.Size = New System.Drawing.Size(114, 21)
         Me.cmbsexo.TabIndex = 11
@@ -139,7 +139,7 @@ Partial Class FrmEmpleados
         '
         Me.dtpfechanac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpfechanac.Location = New System.Drawing.Point(116, 127)
-        Me.dtpfechanac.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpfechanac.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpfechanac.Name = "dtpfechanac"
         Me.dtpfechanac.Size = New System.Drawing.Size(113, 19)
         Me.dtpfechanac.TabIndex = 10
@@ -147,7 +147,7 @@ Partial Class FrmEmpleados
         'txtapellidos
         '
         Me.txtapellidos.Location = New System.Drawing.Point(116, 101)
-        Me.txtapellidos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtapellidos.Margin = New System.Windows.Forms.Padding(2)
         Me.txtapellidos.Name = "txtapellidos"
         Me.txtapellidos.Size = New System.Drawing.Size(151, 19)
         Me.txtapellidos.TabIndex = 9
@@ -155,7 +155,7 @@ Partial Class FrmEmpleados
         'txtnombres
         '
         Me.txtnombres.Location = New System.Drawing.Point(116, 77)
-        Me.txtnombres.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnombres.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnombres.Name = "txtnombres"
         Me.txtnombres.Size = New System.Drawing.Size(151, 19)
         Me.txtnombres.TabIndex = 8
@@ -163,7 +163,7 @@ Partial Class FrmEmpleados
         'txtDNI
         '
         Me.txtDNI.Location = New System.Drawing.Point(116, 50)
-        Me.txtDNI.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDNI.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDNI.Name = "txtDNI"
         Me.txtDNI.Size = New System.Drawing.Size(151, 19)
         Me.txtDNI.TabIndex = 7
@@ -171,7 +171,7 @@ Partial Class FrmEmpleados
         'txtNumEmpleado
         '
         Me.txtNumEmpleado.Location = New System.Drawing.Point(116, 24)
-        Me.txtNumEmpleado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNumEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNumEmpleado.Name = "txtNumEmpleado"
         Me.txtNumEmpleado.Size = New System.Drawing.Size(76, 19)
         Me.txtNumEmpleado.TabIndex = 6
@@ -254,9 +254,9 @@ Partial Class FrmEmpleados
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(62, 294)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Size = New System.Drawing.Size(542, 188)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
@@ -266,7 +266,7 @@ Partial Class FrmEmpleados
         '
         Me.ckactivo.AutoSize = True
         Me.ckactivo.Location = New System.Drawing.Point(394, 80)
-        Me.ckactivo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ckactivo.Margin = New System.Windows.Forms.Padding(2)
         Me.ckactivo.Name = "ckactivo"
         Me.ckactivo.Size = New System.Drawing.Size(15, 14)
         Me.ckactivo.TabIndex = 15
@@ -277,7 +277,7 @@ Partial Class FrmEmpleados
         Me.cmbestadocivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbestadocivil.FormattingEnabled = True
         Me.cmbestadocivil.Location = New System.Drawing.Point(394, 53)
-        Me.cmbestadocivil.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbestadocivil.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbestadocivil.Name = "cmbestadocivil"
         Me.cmbestadocivil.Size = New System.Drawing.Size(92, 21)
         Me.cmbestadocivil.TabIndex = 12
@@ -285,7 +285,7 @@ Partial Class FrmEmpleados
         'txtcargo
         '
         Me.txtcargo.Location = New System.Drawing.Point(394, 26)
-        Me.txtcargo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtcargo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtcargo.Name = "txtcargo"
         Me.txtcargo.Size = New System.Drawing.Size(92, 19)
         Me.txtcargo.TabIndex = 14
@@ -293,7 +293,7 @@ Partial Class FrmEmpleados
         'txtdireccion
         '
         Me.txtdireccion.Location = New System.Drawing.Point(104, 113)
-        Me.txtdireccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtdireccion.Margin = New System.Windows.Forms.Padding(2)
         Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.Size = New System.Drawing.Size(381, 51)
@@ -302,7 +302,7 @@ Partial Class FrmEmpleados
         'txtnivelacademico
         '
         Me.txtnivelacademico.Location = New System.Drawing.Point(104, 80)
-        Me.txtnivelacademico.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtnivelacademico.Margin = New System.Windows.Forms.Padding(2)
         Me.txtnivelacademico.Name = "txtnivelacademico"
         Me.txtnivelacademico.Size = New System.Drawing.Size(151, 19)
         Me.txtnivelacademico.TabIndex = 12
@@ -310,7 +310,7 @@ Partial Class FrmEmpleados
         'txtcorreo
         '
         Me.txtcorreo.Location = New System.Drawing.Point(104, 53)
-        Me.txtcorreo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtcorreo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtcorreo.Name = "txtcorreo"
         Me.txtcorreo.Size = New System.Drawing.Size(151, 19)
         Me.txtcorreo.TabIndex = 11
@@ -318,7 +318,7 @@ Partial Class FrmEmpleados
         'txttelefono
         '
         Me.txttelefono.Location = New System.Drawing.Point(104, 28)
-        Me.txttelefono.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txttelefono.Margin = New System.Windows.Forms.Padding(2)
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(88, 19)
         Me.txttelefono.TabIndex = 10
@@ -399,7 +399,7 @@ Partial Class FrmEmpleados
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Location = New System.Drawing.Point(1, -5)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(660, 54)
         Me.Panel1.TabIndex = 3
@@ -408,7 +408,7 @@ Partial Class FrmEmpleados
         '
         Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE1
         Me.PictureBox3.Location = New System.Drawing.Point(595, 2)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(65, 63)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -436,7 +436,7 @@ Partial Class FrmEmpleados
         Me.Panel2.Controls.Add(Me.btnactualizar)
         Me.Panel2.Controls.Add(Me.btnguardar)
         Me.Panel2.Location = New System.Drawing.Point(62, 519)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(542, 57)
         Me.Panel2.TabIndex = 4
@@ -449,7 +449,7 @@ Partial Class FrmEmpleados
         Me.Panel3.Controls.Add(Me.actualizar)
         Me.Panel3.Controls.Add(Me.guardar)
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(542, 57)
         Me.Panel3.TabIndex = 4
@@ -458,7 +458,7 @@ Partial Class FrmEmpleados
         '
         Me.eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.eliminar.Location = New System.Drawing.Point(214, 11)
-        Me.eliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.eliminar.Margin = New System.Windows.Forms.Padding(2)
         Me.eliminar.Name = "eliminar"
         Me.eliminar.Size = New System.Drawing.Size(88, 32)
         Me.eliminar.TabIndex = 5
@@ -469,7 +469,7 @@ Partial Class FrmEmpleados
         '
         Me.btnsalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnsalir.Location = New System.Drawing.Point(457, 11)
-        Me.btnsalir.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnsalir.Margin = New System.Windows.Forms.Padding(2)
         Me.btnsalir.Name = "btnsalir"
         Me.btnsalir.Size = New System.Drawing.Size(74, 32)
         Me.btnsalir.TabIndex = 4
@@ -480,7 +480,7 @@ Partial Class FrmEmpleados
         '
         Me.btncancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancelar.Location = New System.Drawing.Point(314, 11)
-        Me.btncancelar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btncancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(83, 32)
         Me.btncancelar.TabIndex = 3
@@ -491,7 +491,7 @@ Partial Class FrmEmpleados
         '
         Me.actualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.actualizar.Location = New System.Drawing.Point(104, 11)
-        Me.actualizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.actualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.actualizar.Name = "actualizar"
         Me.actualizar.Size = New System.Drawing.Size(98, 32)
         Me.actualizar.TabIndex = 1
@@ -502,7 +502,7 @@ Partial Class FrmEmpleados
         '
         Me.guardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.guardar.Location = New System.Drawing.Point(13, 11)
-        Me.guardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.guardar.Margin = New System.Windows.Forms.Padding(2)
         Me.guardar.Name = "guardar"
         Me.guardar.Size = New System.Drawing.Size(80, 32)
         Me.guardar.TabIndex = 0
@@ -513,7 +513,7 @@ Partial Class FrmEmpleados
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(214, 11)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(88, 32)
         Me.Button1.TabIndex = 5
@@ -524,7 +524,7 @@ Partial Class FrmEmpleados
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(457, 11)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(74, 32)
         Me.Button5.TabIndex = 4
@@ -535,7 +535,7 @@ Partial Class FrmEmpleados
         '
         Me.Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cancelar.Location = New System.Drawing.Point(314, 11)
-        Me.Cancelar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(83, 32)
         Me.Cancelar.TabIndex = 3
@@ -546,7 +546,7 @@ Partial Class FrmEmpleados
         '
         Me.btnactualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnactualizar.Location = New System.Drawing.Point(104, 11)
-        Me.btnactualizar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnactualizar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnactualizar.Name = "btnactualizar"
         Me.btnactualizar.Size = New System.Drawing.Size(98, 32)
         Me.btnactualizar.TabIndex = 1
@@ -557,7 +557,7 @@ Partial Class FrmEmpleados
         '
         Me.btnguardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnguardar.Location = New System.Drawing.Point(13, 11)
-        Me.btnguardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnguardar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(80, 32)
         Me.btnguardar.TabIndex = 0
@@ -573,7 +573,7 @@ Partial Class FrmEmpleados
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmEmpleados"
         Me.Text = "FrmEmpleados"
         Me.GroupBox1.ResumeLayout(False)

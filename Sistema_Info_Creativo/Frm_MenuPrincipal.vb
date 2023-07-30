@@ -154,7 +154,7 @@ Public Class Frm_MenuPrincipal
 
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
         Me.Dispose()
-        FrmVentas.ShowDialog()
+        FrmFacturaVentas.ShowDialog()
     End Sub
 
     Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
@@ -175,6 +175,14 @@ Public Class Frm_MenuPrincipal
     Private Sub ManualDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManualDeUsuarioToolStripMenuItem.Click
         Me.Dispose()
         FrmManual.ShowDialog()
+    End Sub
+
+    Private Sub ReportesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportesToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub TransaccionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TransaccionesToolStripMenuItem.Click
+
     End Sub
 End Class
 

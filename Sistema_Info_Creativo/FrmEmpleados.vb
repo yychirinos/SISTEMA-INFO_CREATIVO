@@ -214,4 +214,8 @@ Public Class FrmEmpleados
     Private Sub cmbestadocivil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbestadocivil.SelectedIndexChanged
 
     End Sub
+
+    Private Sub cmbsexo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbsexo.SelectedIndexChanged
+
+    End Sub
 End Class
