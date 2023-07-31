@@ -45,7 +45,8 @@ Public Class FrmClientes
 
     Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarcombotipocliente()
-        llenargridclientes()
+        'llenargridclientes()
+        LlenarGrifClientesFiltrado()
 
 
     End Sub
@@ -148,19 +149,39 @@ Public Class FrmClientes
 
     End Sub
 
-    Sub llenargridclientes()
+    'Sub llenargridclientes()
+    ' Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
+    'Dim da As New SqlDataAdapter()
+    'Dim dt As New DataTable
+    'Try
+    '   da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion from Clientes
+    '", con)
+    '           da.Fill(dt)
+    '          DataGridClientes.DataSource = dt
+    '
+    'Catch ex As Exception
+
+    'End Try
+    'End Sub
+    '.
+    Sub LlenarGrifClientesFiltrado()
         Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
-        Dim da As New SqlDataAdapter()
-        Dim dt As New DataTable
-        Try
-            da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion from Clientes
-", con)
-            da.Fill(dt)
-            DataGridClientes.DataSource = dt
+        Dim DT As DataTable
+        Dim DA As New SqlDataAdapter
+        Dim cmd As New SqlCommand
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "SELECT codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion
+                          FROM Clientes Where codcliente like'%" & txtCodCliente.Text & "%'"
 
-        Catch ex As Exception
-
-        End Try
+        cmd.ExecuteNonQuery()
+        con.Close()
+        DA.SelectCommand = cmd
+        DT = New DataTable
+        DA.Fill(DT)
+        DataGridClientes.DataSource = DT
+        DataGridClientes.AllowUserToAddRows = False
     End Sub
 
     Private Sub DataGridClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridClientes.CellContentClick
@@ -169,5 +190,13 @@ Public Class FrmClientes
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    End Sub
+
+    Private Sub txtCodCliente_TextChanged(sender As Object, e As EventArgs) Handles txtCodCliente.TextChanged
+        If txtCodCliente.Text <> "" Then
+            LlenarGrifClientesFiltrado()
+        Else
+            LlenarGrifClientesFiltrado()
+        End If
     End Sub
 End Class
