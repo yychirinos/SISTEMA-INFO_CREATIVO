@@ -18,27 +18,29 @@ Public Class Inventario
     End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim Nombre_Producto As String = Nombre_ProductoTextBox.Text
 
-        Dim id_inventario As String = txtid_inventario.Text
+        If String.IsNullOrWhiteSpace(Nombre_Producto) Then
+            MessageBox.Show("Por favor, ingresa un nombre de producto válido.")
+            Return
+        End If
 
         Dim connection As New SqlConnection(connectionString)
         connection.Open()
-        Dim query As String = "SELECT * FROM INVENTARIO WHERE id_inventario = @id_inventario"
+
+        Dim query As String = "SELECT Stock FROM INVENTARIO WHERE Nombre_Producto = @NombreProducto"
         Dim command As New SqlCommand(query, connection)
-        command.Parameters.AddWithValue("@id_inventario", id_inventario)
-        Dim reader As SqlDataReader = command.ExecuteReader()
+        command.Parameters.AddWithValue("@NombreProducto", Nombre_Producto)
 
-        If reader.Read() Then
+        Dim stock As Object = command.ExecuteScalar()
 
-            Id_ProductoTextBox.Text = reader("Id_Producto").ToString()
-            Nombre_ProductoTextBox.Text = reader("Nombre_Producto").ToString()
-            dtpfecharegistro.Value = Convert.ToDateTime(reader("Fecha_Registro"))
-            StockTextBox.Text = reader("Stock").ToString()
+        If stock IsNot Nothing AndAlso Not DBNull.Value.Equals(stock) Then
+            StockTextBox.Text = stock.ToString()
+
         Else
-            MessageBox.Show("No se encontró el registro.")
+            StockTextBox.Text = "No se encontro el producto o el stock esta vacio"
         End If
 
-        reader.Close()
         connection.Close()
     End Sub
 

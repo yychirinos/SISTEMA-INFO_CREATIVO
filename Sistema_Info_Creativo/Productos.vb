@@ -29,7 +29,7 @@ Public Class Productos
         Dim Descripcion_Producto As String = txtDescripcionProducto.Text
         Dim Categoria As String = CmbCategoria.Text
         Dim Modelo As String = txtModelo.Text
-        Dim Nombre_Proveedor As String = txtNombreProveedor.Text
+        Dim Nombre_Proveedor As String = cmbProveedor.Text
         Dim Fecha_Registro As DateTime = dtpFechaRegistro.Value
         Dim Precio_Unitario As Decimal = Decimal.Parse(txtPrecioUnitario.Text)
         Dim Precio_Mayorista As Decimal = Decimal.Parse(txtPrecioMayorista.Text)
@@ -75,7 +75,7 @@ Public Class Productos
             txtDescripcionProducto.Text = reader("Descripcion_Producto").ToString()
             CmbCategoria.Text = reader("Categoria").ToString()
             txtModelo.Text = reader("Modelo").ToString()
-            txtNombreProveedor.Text = reader("Nombre_Proveedor").ToString()
+            cmbProveedor.Text = reader("Nombre_Proveedor").ToString()
             dtpFechaRegistro.Value = Convert.ToDateTime(reader("Fecha_Registro"))
             txtPrecioUnitario.Text = reader("Precio_Unitario").ToString()
             txtPrecioMayorista.Text = reader("Precio_Mayorista").ToString()
@@ -118,7 +118,7 @@ Public Class Productos
         txtDescripcionProducto.Text = ""
         CmbCategoria.Text = ""
         txtModelo.Text = ""
-        txtNombreProveedor.Text = ""
+        cmbProveedor.Text = ""
         dtpFechaRegistro.Value = DateTime.Now
         txtPrecioUnitario.Text = ""
         txtPrecioMayorista.Text = ""
