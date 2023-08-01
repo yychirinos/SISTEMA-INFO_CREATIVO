@@ -67,7 +67,7 @@ Public Class FrmModificarProveedor
         Dim nuevaCategoria As String = cboModificarCategoria.Text
 
         ' Cadena de conexión
-        Dim connectionString As String = "Data Source=HECTOR\SQLEXPRESS;Initial Catalog=proveedoresBD;Integrated Security=True"
+        Dim connectionString As String = "Data Source=LAPTOP-3LMQAO4P;Initial Catalog=InfoCreativos;Integrated Security=True"
 
         ' Consulta SQL para llamar al procedimiento almacenado de actualización
         Dim query As String = "Update Proveedores

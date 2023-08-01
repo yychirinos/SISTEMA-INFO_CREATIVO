@@ -23,8 +23,8 @@ Partial Class FrmAgregarProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtIdProveedor = New System.Windows.Forms.TextBox()
         Me.txtNombreProveedor = New System.Windows.Forms.TextBox()
@@ -56,34 +56,34 @@ Partial Class FrmAgregarProveedor
         Me.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Location = New System.Drawing.Point(-1, -3)
+        Me.Panel1.Location = New System.Drawing.Point(-1, -4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(603, 57)
+        Me.Panel1.Size = New System.Drawing.Size(804, 70)
         Me.Panel1.TabIndex = 27
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE4
+        Me.PictureBox3.Location = New System.Drawing.Point(715, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(87, 81)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 26
+        Me.PictureBox3.TabStop = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(138, 12)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(184, 15)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(352, 32)
+        Me.Label9.Size = New System.Drawing.Size(457, 42)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "AGREGAR PROVEEDOR"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE4
-        Me.PictureBox3.Location = New System.Drawing.Point(536, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(65, 66)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 26
-        Me.PictureBox3.TabStop = False
         '
         'GroupBox1
         '
@@ -103,9 +103,11 @@ Partial Class FrmAgregarProveedor
         Me.GroupBox1.Controls.Add(Me.txtTelefonoProveedor)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtDireccionProveedor)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 79)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 97)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(577, 379)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(769, 466)
         Me.GroupBox1.TabIndex = 28
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Obligatorios :"
@@ -116,9 +118,10 @@ Partial Class FrmAgregarProveedor
         Me.txtIdProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtIdProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtIdProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtIdProveedor.Location = New System.Drawing.Point(169, 30)
+        Me.txtIdProveedor.Location = New System.Drawing.Point(225, 37)
+        Me.txtIdProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtIdProveedor.Name = "txtIdProveedor"
-        Me.txtIdProveedor.Size = New System.Drawing.Size(383, 22)
+        Me.txtIdProveedor.Size = New System.Drawing.Size(509, 26)
         Me.txtIdProveedor.TabIndex = 0
         '
         'txtNombreProveedor
@@ -127,9 +130,10 @@ Partial Class FrmAgregarProveedor
         Me.txtNombreProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtNombreProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtNombreProveedor.Location = New System.Drawing.Point(169, 65)
+        Me.txtNombreProveedor.Location = New System.Drawing.Point(225, 80)
+        Me.txtNombreProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombreProveedor.Name = "txtNombreProveedor"
-        Me.txtNombreProveedor.Size = New System.Drawing.Size(383, 22)
+        Me.txtNombreProveedor.Size = New System.Drawing.Size(509, 26)
         Me.txtNombreProveedor.TabIndex = 1
         '
         'Label1
@@ -138,9 +142,10 @@ Partial Class FrmAgregarProveedor
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(55, 30)
+        Me.Label1.Location = New System.Drawing.Point(73, 37)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 16)
+        Me.Label1.Size = New System.Drawing.Size(131, 20)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "ID Proveedor :"
         '
@@ -150,9 +155,10 @@ Partial Class FrmAgregarProveedor
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(14, 65)
+        Me.Label2.Location = New System.Drawing.Point(19, 80)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(148, 16)
+        Me.Label2.Size = New System.Drawing.Size(177, 20)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Nombre Proveedor :"
         '
@@ -164,9 +170,10 @@ Partial Class FrmAgregarProveedor
         Me.cboCategoriaProveedor.FormattingEnabled = True
         Me.cboCategoriaProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.cboCategoriaProveedor.Items.AddRange(New Object() {"Accesorios para computadoras", "Componentes de hardware", "Periféricos", "Software", "Computadoras portátiles", "Computadoras de escritorio", "Tabletas", "Impresoras y escáneres", "Almacenamiento de datos", "Redes y conectividad"})
-        Me.cboCategoriaProveedor.Location = New System.Drawing.Point(169, 320)
+        Me.cboCategoriaProveedor.Location = New System.Drawing.Point(225, 394)
+        Me.cboCategoriaProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCategoriaProveedor.Name = "cboCategoriaProveedor"
-        Me.cboCategoriaProveedor.Size = New System.Drawing.Size(383, 24)
+        Me.cboCategoriaProveedor.Size = New System.Drawing.Size(509, 28)
         Me.cboCategoriaProveedor.TabIndex = 15
         '
         'Label8
@@ -175,9 +182,10 @@ Partial Class FrmAgregarProveedor
         Me.Label8.BackColor = System.Drawing.SystemColors.Control
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gray
-        Me.Label8.Location = New System.Drawing.Point(78, 320)
+        Me.Label8.Location = New System.Drawing.Point(104, 394)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(84, 16)
+        Me.Label8.Size = New System.Drawing.Size(102, 20)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Categoría :"
         '
@@ -189,9 +197,10 @@ Partial Class FrmAgregarProveedor
         Me.cboDepartamento.FormattingEnabled = True
         Me.cboDepartamento.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.cboDepartamento.Items.AddRange(New Object() {"Atlántida", "Colón", "Comayagua", "Copán", "Cortés", "El Paraíso", "Francisco Morazán", "Gracias a Dios", "Intibucá", "Islas de la Bahía", "La Paz", "Lempira", "Ocotepeque", "Olancho", "Santa Bárbara", "Valle", "Yoro"})
-        Me.cboDepartamento.Location = New System.Drawing.Point(169, 103)
+        Me.cboDepartamento.Location = New System.Drawing.Point(225, 127)
+        Me.cboDepartamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboDepartamento.Name = "cboDepartamento"
-        Me.cboDepartamento.Size = New System.Drawing.Size(383, 24)
+        Me.cboDepartamento.Size = New System.Drawing.Size(509, 28)
         Me.cboDepartamento.TabIndex = 12
         '
         'txtCiudadProveedor
@@ -200,9 +209,10 @@ Partial Class FrmAgregarProveedor
         Me.txtCiudadProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCiudadProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtCiudadProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtCiudadProveedor.Location = New System.Drawing.Point(169, 142)
+        Me.txtCiudadProveedor.Location = New System.Drawing.Point(225, 175)
+        Me.txtCiudadProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCiudadProveedor.Name = "txtCiudadProveedor"
-        Me.txtCiudadProveedor.Size = New System.Drawing.Size(383, 22)
+        Me.txtCiudadProveedor.Size = New System.Drawing.Size(509, 26)
         Me.txtCiudadProveedor.TabIndex = 3
         '
         'Label6
@@ -211,9 +221,10 @@ Partial Class FrmAgregarProveedor
         Me.Label6.BackColor = System.Drawing.SystemColors.Control
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gray
-        Me.Label6.Location = New System.Drawing.Point(100, 278)
+        Me.Label6.Location = New System.Drawing.Point(133, 342)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 16)
+        Me.Label6.Size = New System.Drawing.Size(78, 20)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Correo :"
         '
@@ -223,9 +234,10 @@ Partial Class FrmAgregarProveedor
         Me.Label7.BackColor = System.Drawing.SystemColors.Control
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(49, 103)
+        Me.Label7.Location = New System.Drawing.Point(65, 127)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(114, 16)
+        Me.Label7.Size = New System.Drawing.Size(139, 20)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Departamento :"
         '
@@ -235,9 +247,10 @@ Partial Class FrmAgregarProveedor
         Me.Label5.BackColor = System.Drawing.SystemColors.Control
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gray
-        Me.Label5.Location = New System.Drawing.Point(85, 238)
+        Me.Label5.Location = New System.Drawing.Point(113, 293)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 16)
+        Me.Label5.Size = New System.Drawing.Size(93, 20)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Teléfono :"
         '
@@ -247,9 +260,10 @@ Partial Class FrmAgregarProveedor
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gray
-        Me.Label4.Location = New System.Drawing.Point(98, 142)
+        Me.Label4.Location = New System.Drawing.Point(131, 175)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 16)
+        Me.Label4.Size = New System.Drawing.Size(79, 20)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Ciudad :"
         '
@@ -259,9 +273,10 @@ Partial Class FrmAgregarProveedor
         Me.txtCorreoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreoProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtCorreoProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtCorreoProveedor.Location = New System.Drawing.Point(169, 278)
+        Me.txtCorreoProveedor.Location = New System.Drawing.Point(225, 342)
+        Me.txtCorreoProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtCorreoProveedor.Name = "txtCorreoProveedor"
-        Me.txtCorreoProveedor.Size = New System.Drawing.Size(383, 22)
+        Me.txtCorreoProveedor.Size = New System.Drawing.Size(509, 26)
         Me.txtCorreoProveedor.TabIndex = 5
         '
         'txtTelefonoProveedor
@@ -270,9 +285,10 @@ Partial Class FrmAgregarProveedor
         Me.txtTelefonoProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelefonoProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtTelefonoProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtTelefonoProveedor.Location = New System.Drawing.Point(169, 238)
+        Me.txtTelefonoProveedor.Location = New System.Drawing.Point(225, 293)
+        Me.txtTelefonoProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTelefonoProveedor.Name = "txtTelefonoProveedor"
-        Me.txtTelefonoProveedor.Size = New System.Drawing.Size(383, 22)
+        Me.txtTelefonoProveedor.Size = New System.Drawing.Size(509, 26)
         Me.txtTelefonoProveedor.TabIndex = 4
         '
         'Label3
@@ -281,9 +297,10 @@ Partial Class FrmAgregarProveedor
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(80, 180)
+        Me.Label3.Location = New System.Drawing.Point(107, 222)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 16)
+        Me.Label3.Size = New System.Drawing.Size(102, 20)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Dirección :"
         '
@@ -293,19 +310,22 @@ Partial Class FrmAgregarProveedor
         Me.txtDireccionProveedor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccionProveedor.ForeColor = System.Drawing.SystemColors.InfoText
         Me.txtDireccionProveedor.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txtDireccionProveedor.Location = New System.Drawing.Point(169, 179)
+        Me.txtDireccionProveedor.Location = New System.Drawing.Point(225, 220)
+        Me.txtDireccionProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDireccionProveedor.Multiline = True
         Me.txtDireccionProveedor.Name = "txtDireccionProveedor"
-        Me.txtDireccionProveedor.Size = New System.Drawing.Size(383, 40)
+        Me.txtDireccionProveedor.Size = New System.Drawing.Size(509, 48)
         Me.txtDireccionProveedor.TabIndex = 2
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.btnCancelar)
         Me.GroupBox2.Controls.Add(Me.btnIngresar)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 482)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 593)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(577, 79)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(769, 97)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
         '
@@ -317,9 +337,10 @@ Partial Class FrmAgregarProveedor
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(211, 19)
+        Me.btnCancelar.Location = New System.Drawing.Point(281, 23)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(147, 40)
+        Me.btnCancelar.Size = New System.Drawing.Size(196, 49)
         Me.btnCancelar.TabIndex = 18
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -332,22 +353,24 @@ Partial Class FrmAgregarProveedor
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresar.ForeColor = System.Drawing.Color.White
-        Me.btnIngresar.Location = New System.Drawing.Point(405, 19)
+        Me.btnIngresar.Location = New System.Drawing.Point(540, 23)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(147, 40)
+        Me.btnIngresar.Size = New System.Drawing.Size(196, 49)
         Me.btnIngresar.TabIndex = 16
         Me.btnIngresar.Text = "Guardar Datos"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
         'FrmAgregarProveedor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(601, 595)
+        Me.ClientSize = New System.Drawing.Size(801, 732)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "FrmAgregarProveedor"
         Me.ShowIcon = False

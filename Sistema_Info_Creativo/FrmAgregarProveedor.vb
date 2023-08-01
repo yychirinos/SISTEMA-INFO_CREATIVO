@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmAgregarProveedor
     Public Event ProveedorAgregado As EventHandler
-    Dim connectionString As String = "Data Source=DESKTOP-50ALDBO;Initial Catalog=InfoCreativos;Integrated Security=True"
+    Dim connectionString As String = "Data Source=LAPTOP-3LMQAO4P;Initial Catalog=InfoCreativos;Integrated Security=True"
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Dim resultado As DialogResult = MessageBox.Show("Salir sin agregar Proveedor?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -99,5 +99,9 @@ Public Class FrmAgregarProveedor
         txtTelefonoProveedor.Text = ""
         txtCorreoProveedor.Text = ""
         cboCategoriaProveedor.Text = ""
+    End Sub
+
+    Private Sub FrmAgregarProveedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

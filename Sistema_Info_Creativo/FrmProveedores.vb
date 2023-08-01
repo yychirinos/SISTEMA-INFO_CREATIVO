@@ -9,7 +9,7 @@ Public Class FrmProveedores
         ' Limpiar el DataTable antes de cargar los proveedores
         dtProveedores.Clear()
         ' Cadena de conexión
-        Dim connectionString As String = "Data Source=HECTOR\SQLEXPRESS;Initial Catalog=proveedoresBD;Integrated Security=True"
+        Dim connectionString As String = "Data Source=LAPTOP-3LMQAO4P;Initial Catalog=InfoCreativos;Integrated Security=True"
 
         ' Consulta SQL para seleccionar los proveedores
         Dim query As String = "SELECT ID_PROVEEDOR, NOMBRE_PROVEEDOR, DEPARTAMENTO, CIUDAD, DIRECCION, TELEFONO, CORREO, CATEGORIA FROM Proveedores"
