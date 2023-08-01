@@ -29,7 +29,7 @@ Public Class FrmFacturaVentas
         con.Open()
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT ID_PRODUCTO,NOMBRE_PRODUCTO FROM PRODUCTOS"
+        cmd.CommandText = "SELECT Id_Producto,Nombre_Producto FROM PRODUCTOS"
         cmd.ExecuteNonQuery()
         con.Close()
         DA.SelectCommand = cmd
@@ -37,7 +37,7 @@ Public Class FrmFacturaVentas
         DA.Fill(DT)
         cmbproducto.DataSource = DT
         cmbproducto.DisplayMember = "IdProducto"
-        cmbproducto.ValueMember = "NOMBRE_PRODUCTO"
+        cmbproducto.ValueMember = "Nombre_Producto"
 
 
     End Sub
@@ -89,7 +89,7 @@ Public Class FrmFacturaVentas
             MessageBox.Show("Porvafor  llenar todos los campos")
         Else
             Dim con As SqlConnection = New SqlConnection(My.Settings.INFO_CREATIVO)
-            Dim cmd As SqlCommand = New SqlCommand("sp_Factura", con)
+            Dim cmd As SqlCommand = New SqlCommand("sp_FACTURA", con)
             con.Open()
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@bandera", 1)
@@ -106,6 +106,8 @@ Public Class FrmFacturaVentas
 
             cmd.ExecuteNonQuery()
             MessageBox.Show("FACTURA REGISTRADA CORRECTAMENTE")
+            limpiarcontroles()
+            llenardgvFactura()
             con.Close()
         End If
     End Sub
@@ -176,4 +178,50 @@ Public Class FrmFacturaVentas
 
 
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        limpiarcontroles()
+
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Dispose()
+        Frm_MenuPrincipal.ShowDialog()
+
+    End Sub
+
+    Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
+        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
+        con.Open()
+        Dim reader As SqlClient.SqlDataReader
+        Dim cmd As New SqlClient.SqlCommand("Select * from FACTURA where NumFactura = '" & txtnumfactura.Text & "'", con)
+        reader = cmd.ExecuteReader
+
+        'LLENAR INFORMACION SI EXISTE EMPLEADO
+        If reader.Read() Then
+            txtnumfactura.Text = reader.Item("NumFactura")
+            cmbproducto.SelectedValue = reader.Item("producto")
+            txtidcliente.Text = reader.Item("IdCliente")
+            txtidusuario.Text = reader.Item("IdUsuario")
+            dtfecha.Value = reader.Item("fecha")
+            txtprecio.Text = reader.Item("Precio")
+            txtcantidad.Text = reader.Item("Cantidad")
+            txtdescuento.Text = reader.Item("descuento")
+            txttotal.Text = reader.Item("total")
+
+
+
+
+        Else
+            If MsgBox(" La Factura no registrada en la base de datos, desea crearlo?", MsgBoxStyle.Information + vbYesNo) = vbYes Then
+                btnagregar.Enabled = True
+
+            Else
+                Return
+            End If
+        End If
+        con.Close()
+
+    End Sub
+
 End Class

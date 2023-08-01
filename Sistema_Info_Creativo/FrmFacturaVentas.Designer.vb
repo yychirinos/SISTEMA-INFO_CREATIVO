@@ -54,6 +54,7 @@ Partial Class FrmFacturaVentas
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.btnbuscar = New System.Windows.Forms.Button()
         Me.Cmbagregar.SuspendLayout()
         CType(Me.dgvFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -137,6 +138,7 @@ Partial Class FrmFacturaVentas
         '
         'Cmbagregar
         '
+        Me.Cmbagregar.Controls.Add(Me.btnbuscar)
         Me.Cmbagregar.Controls.Add(Me.txtidusuario)
         Me.Cmbagregar.Controls.Add(Me.cmbproducto)
         Me.Cmbagregar.Controls.Add(Me.Label5)
@@ -386,6 +388,18 @@ Partial Class FrmFacturaVentas
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "FACTURACION DE VENTAS"
         '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackColor = System.Drawing.Color.Transparent
+        Me.btnbuscar.BackgroundImage = Global.Sistema_Info_Creativo.My.Resources.Resources._5c790123003fa702a1d2795b
+        Me.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnbuscar.Location = New System.Drawing.Point(275, 32)
+        Me.btnbuscar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
+        Me.btnbuscar.TabIndex = 36
+        Me.btnbuscar.UseVisualStyleBackColor = False
+        '
         'FrmFacturaVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -450,4 +464,5 @@ Partial Class FrmFacturaVentas
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents btnbuscar As Button
 End Class
