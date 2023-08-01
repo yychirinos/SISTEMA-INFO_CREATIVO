@@ -340,7 +340,7 @@ Partial Class FrmFacturaVentas
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 33
-        Me.Button1.Text = "Eliminar"
+        Me.Button1.Text = "Cancelar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -350,7 +350,7 @@ Partial Class FrmFacturaVentas
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 34
-        Me.Button2.Text = "Eliminar"
+        Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Panel1
