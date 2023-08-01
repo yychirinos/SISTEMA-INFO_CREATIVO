@@ -24,6 +24,8 @@ Partial Class FrmCompras
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidcompra = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -46,23 +48,21 @@ Partial Class FrmCompras
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.datagridcompras = New System.Windows.Forms.DataGridView()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnbuscar = New System.Windows.Forms.Button()
         Me.btneliminar = New System.Windows.Forms.Button()
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.btnregistrar = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.datagridcompra = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.datagridcompra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -75,6 +75,29 @@ Partial Class FrmCompras
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1113, 66)
         Me.Panel1.TabIndex = 4
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(318, 8)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(482, 49)
+        Me.Label11.TabIndex = 26
+        Me.Label11.Text = "REGISTRAR COMPRA"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
+        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE6
+        Me.PictureBox3.Location = New System.Drawing.Point(1015, 0)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(96, 99)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 23
+        Me.PictureBox3.TabStop = False
         '
         'Label1
         '
@@ -90,7 +113,7 @@ Partial Class FrmCompras
         'txtidcompra
         '
         Me.txtidcompra.Location = New System.Drawing.Point(163, 31)
-        Me.txtidcompra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtidcompra.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidcompra.Name = "txtidcompra"
         Me.txtidcompra.Size = New System.Drawing.Size(132, 22)
         Me.txtidcompra.TabIndex = 6
@@ -130,9 +153,9 @@ Partial Class FrmCompras
         Me.GroupBox1.Controls.Add(Me.txtidcompra)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(9, 74)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1101, 239)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
@@ -141,7 +164,7 @@ Partial Class FrmCompras
         '
         Me.btnlimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnlimpiar.Location = New System.Drawing.Point(799, 178)
-        Me.btnlimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnlimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnlimpiar.Name = "btnlimpiar"
         Me.btnlimpiar.Size = New System.Drawing.Size(100, 28)
         Me.btnlimpiar.TabIndex = 25
@@ -152,7 +175,7 @@ Partial Class FrmCompras
         '
         Me.btncalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncalcular.Location = New System.Drawing.Point(799, 143)
-        Me.btncalcular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncalcular.Margin = New System.Windows.Forms.Padding(4)
         Me.btncalcular.Name = "btncalcular"
         Me.btncalcular.Size = New System.Drawing.Size(100, 28)
         Me.btncalcular.TabIndex = 24
@@ -162,7 +185,7 @@ Partial Class FrmCompras
         'txttotal
         '
         Me.txttotal.Location = New System.Drawing.Point(584, 169)
-        Me.txttotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txttotal.Margin = New System.Windows.Forms.Padding(4)
         Me.txttotal.Name = "txttotal"
         Me.txttotal.Size = New System.Drawing.Size(181, 22)
         Me.txttotal.TabIndex = 23
@@ -170,7 +193,7 @@ Partial Class FrmCompras
         'dtpfecha
         '
         Me.dtpfecha.Location = New System.Drawing.Point(163, 213)
-        Me.dtpfecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpfecha.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpfecha.Name = "dtpfecha"
         Me.dtpfecha.Size = New System.Drawing.Size(199, 22)
         Me.dtpfecha.TabIndex = 21
@@ -178,7 +201,7 @@ Partial Class FrmCompras
         'txtcantidadarticulo
         '
         Me.txtcantidadarticulo.Location = New System.Drawing.Point(584, 80)
-        Me.txtcantidadarticulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtcantidadarticulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtcantidadarticulo.Name = "txtcantidadarticulo"
         Me.txtcantidadarticulo.Size = New System.Drawing.Size(181, 22)
         Me.txtcantidadarticulo.TabIndex = 20
@@ -186,7 +209,7 @@ Partial Class FrmCompras
         'txtprecioarticulo
         '
         Me.txtprecioarticulo.Location = New System.Drawing.Point(584, 122)
-        Me.txtprecioarticulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtprecioarticulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtprecioarticulo.Name = "txtprecioarticulo"
         Me.txtprecioarticulo.Size = New System.Drawing.Size(181, 22)
         Me.txtprecioarticulo.TabIndex = 12
@@ -194,7 +217,7 @@ Partial Class FrmCompras
         'txtarticulo
         '
         Me.txtarticulo.Location = New System.Drawing.Point(584, 31)
-        Me.txtarticulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtarticulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtarticulo.Name = "txtarticulo"
         Me.txtarticulo.Size = New System.Drawing.Size(191, 22)
         Me.txtarticulo.TabIndex = 19
@@ -202,7 +225,7 @@ Partial Class FrmCompras
         'txtidarticulo
         '
         Me.txtidarticulo.Location = New System.Drawing.Point(163, 165)
-        Me.txtidarticulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtidarticulo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidarticulo.Name = "txtidarticulo"
         Me.txtidarticulo.Size = New System.Drawing.Size(132, 22)
         Me.txtidarticulo.TabIndex = 18
@@ -210,7 +233,7 @@ Partial Class FrmCompras
         'txtidproveedor
         '
         Me.txtidproveedor.Location = New System.Drawing.Point(163, 118)
-        Me.txtidproveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtidproveedor.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidproveedor.Name = "txtidproveedor"
         Me.txtidproveedor.Size = New System.Drawing.Size(132, 22)
         Me.txtidproveedor.TabIndex = 17
@@ -218,7 +241,7 @@ Partial Class FrmCompras
         'txtidempleado
         '
         Me.txtidempleado.Location = New System.Drawing.Point(163, 71)
-        Me.txtidempleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtidempleado.Margin = New System.Windows.Forms.Padding(4)
         Me.txtidempleado.Name = "txtidempleado"
         Me.txtidempleado.Size = New System.Drawing.Size(132, 22)
         Me.txtidempleado.TabIndex = 16
@@ -311,30 +334,13 @@ Partial Class FrmCompras
         Me.GroupBox2.Controls.Add(Me.PictureBox6)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(456, 350)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(616, 100)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opciones"
-        '
-        'datagridcompras
-        '
-        Me.datagridcompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridcompras.Location = New System.Drawing.Point(0, 457)
-        Me.datagridcompras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.datagridcompras.Name = "datagridcompras"
-        Me.datagridcompras.RowHeadersWidth = 51
-        Me.datagridcompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.datagridcompras.Size = New System.Drawing.Size(1111, 156)
-        Me.datagridcompras.TabIndex = 12
-        '
-        'ToolTip1
-        '
-        Me.ToolTip1.AutoPopDelay = 5000
-        Me.ToolTip1.InitialDelay = 100
-        Me.ToolTip1.ReshowDelay = 100
         '
         'btnbuscar
         '
@@ -408,50 +414,43 @@ Partial Class FrmCompras
         Me.PictureBox6.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox6, "Volver al Menu Principal.")
         '
-        'PictureBox3
+        'ToolTip1
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Blue
-        Me.PictureBox3.Image = Global.Sistema_Info_Creativo.My.Resources.Resources.LOGOTIPO_INFO_CREATIVE6
-        Me.PictureBox3.Location = New System.Drawing.Point(1015, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(96, 99)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 23
-        Me.PictureBox3.TabStop = False
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 100
+        Me.ToolTip1.ReshowDelay = 100
         '
-        'Label11
+        'datagridcompra
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(318, 8)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(482, 49)
-        Me.Label11.TabIndex = 26
-        Me.Label11.Text = "REGISTRAR COMPRA"
+        Me.datagridcompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridcompra.Location = New System.Drawing.Point(0, 457)
+        Me.datagridcompra.Name = "datagridcompra"
+        Me.datagridcompra.RowHeadersWidth = 51
+        Me.datagridcompra.RowTemplate.Height = 24
+        Me.datagridcompra.Size = New System.Drawing.Size(1110, 205)
+        Me.datagridcompra.TabIndex = 12
         '
         'FrmCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1108, 613)
-        Me.Controls.Add(Me.datagridcompras)
+        Me.ClientSize = New System.Drawing.Size(1108, 682)
+        Me.Controls.Add(Me.datagridcompra)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmCompras"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.datagridcompras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.datagridcompra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -480,7 +479,6 @@ Partial Class FrmCompras
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents btnregistrar As Button
-    Friend WithEvents datagridcompras As DataGridView
     Friend WithEvents btnactualizar As Button
     Friend WithEvents btneliminar As Button
     Friend WithEvents btnbuscar As Button
@@ -489,4 +487,5 @@ Partial Class FrmCompras
     Friend WithEvents btnlimpiar As Button
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Label11 As Label
+    Friend WithEvents datagridcompra As DataGridView
 End Class

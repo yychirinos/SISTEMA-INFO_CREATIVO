@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Productos
-    Dim connectionString As String = "Data Source=DESKTOP-50ALDBO;Initial Catalog=InfoCreativos;Integrated Security=True"
+    Dim connectionString As String = "Data Source=LAPTOP-3LMQAO4P;Initial Catalog=InfoCreativos;Integrated Security=True"
     Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'InfoCreativosDataSet.Productos' table. You can move, or remove it, as needed.
         Me.ProductosTableAdapter.Fill(Me.InfoCreativosDataSet.Productos)

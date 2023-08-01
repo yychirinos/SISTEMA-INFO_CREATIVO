@@ -16,11 +16,13 @@ Public Class FrmClientes
             cmd.Parameters.AddWithValue("@dni", Txtdnicliente.Text)
             cmd.Parameters.AddWithValue("@telefono", Txttelefono.Text)
             cmd.Parameters.AddWithValue("@correo", txtcorreo.Text)
-            cmd.Parameters.AddWithValue("direccion", txtdireccion.Text)
+            cmd.Parameters.AddWithValue("@direccion", txtdireccion.Text)
+            cmd.Parameters.AddWithValue("@fecharegistro ", dtpfecha.Value)
 
             cmd.ExecuteNonQuery()
             MessageBox.Show("Cliente guardado correctamente")
-
+            limpiarcontroles()
+            llenargridclientes()
             con.Close()
         End If
 
@@ -45,7 +47,7 @@ Public Class FrmClientes
 
     Private Sub FrmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarcombotipocliente()
-        'llenargridclientes()
+        LlenarGridClientes()
         LlenarGrifClientesFiltrado()
 
 
@@ -68,10 +70,11 @@ Public Class FrmClientes
             cmd.Parameters.AddWithValue("@telefono", Txttelefono.Text)
             cmd.Parameters.AddWithValue("@correo", txtcorreo.Text)
             cmd.Parameters.AddWithValue("direccion", txtdireccion.Text)
+            cmd.Parameters.AddWithValue("@fecharegistro ", dtpfecha.Value)
 
             cmd.ExecuteNonQuery()
             MessageBox.Show("Actualizacion correcta")
-
+            limpiarcontroles()
             con.Close()
         End If
     End Sub
@@ -92,6 +95,8 @@ Public Class FrmClientes
             Txttelefono.Text = reader.Item("telefono")
             txtcorreo.Text = reader.Item("correo")
             txtdireccion.Text = reader.Item("direccion")
+            cmd.Parameters.AddWithValue("@fecharegistro ", dtpfecha.Value)
+
 
             btnactualizar.Enabled = True
 
@@ -111,7 +116,7 @@ Public Class FrmClientes
     End Sub
     Sub limpiarcontroles()
 
-
+        txtCodCliente.Text = ""
         txtNombreCliente.Text = ""
         txtapellidocliente.Text = ""
         Txtdnicliente.Text = ""
@@ -149,20 +154,20 @@ Public Class FrmClientes
 
     End Sub
 
-    'Sub llenargridclientes()
-    ' Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
-    'Dim da As New SqlDataAdapter()
-    'Dim dt As New DataTable
-    'Try
-    '   da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion from Clientes
-    '", con)
-    '           da.Fill(dt)
-    '          DataGridClientes.DataSource = dt
-    '
-    'Catch ex As Exception
+    Sub llenargridclientes()
+        Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
+        Dim da As New SqlDataAdapter()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion, FechaRegistro [Fecha Registro] from Clientes
+    ", con)
+            da.Fill(dt)
+            DataGridClientes.DataSource = dt
 
-    'End Try
-    'End Sub
+        Catch ex As Exception
+
+        End Try
+    End Sub
     '.
     Sub LlenarGrifClientesFiltrado()
         Dim con As New SqlConnection(My.Settings.INFO_CREATIVO)
@@ -172,7 +177,7 @@ Public Class FrmClientes
         con.Open()
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion
+        cmd.CommandText = "SELECT codcliente [Cod Cliente], Tipocliente [Tipo Cliente], Nombres, Apellidos,DNI, Telefono, Correo, Direccion,FechaRegistro [Fecha Registro]
                           FROM Clientes Where codcliente like'%" & txtCodCliente.Text & "%'"
 
         cmd.ExecuteNonQuery()
@@ -184,25 +189,25 @@ Public Class FrmClientes
         DataGridClientes.AllowUserToAddRows = False
     End Sub
 
-    Sub LlenarGridClientes()
-        DataGridClientes.AllowUserToAddRows = False
+    'Sub LlenarGridClientes()
+    ' DataGridClientes.AllowUserToAddRows = False
 
-        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
-        con.Open()
-        Dim reader As SqlClient.SqlDataReader
-        Dim cmd As New SqlClient.SqlCommand("SELECT codcliente, tipocliente, nombres, apellidos, dni, telefono, correo, direccion FROM clientes", con)
+    'Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
+    'con.Open()
+    'Dim reader As SqlClient.SqlDataReader
+    'Dim cmd As New SqlClient.SqlCommand("SELECT codcliente, tipocliente, nombres, apellidos, dni, telefono, correo, direccion FROM clientes", con)
 
-        reader = cmd.ExecuteReader
-
-
-
-        While reader.Read
-            DataGridClientes.Rows.Add(reader.Item("codcliente"), reader.Item("tipocliente"), reader.Item("nombres"), reader.Item("apellidos"), reader.Item("dni"), reader.Item("telefono"), reader.Item("correo"), reader.Item("direccion"))
-
-        End While
+    ' reader = cmd.ExecuteReader
 
 
-    End Sub
+
+    'While reader.Read
+    ' DataGridClientes.Rows.Add(reader.Item("codcliente"), reader.Item("tipocliente"), reader.Item("nombres"), reader.Item("apellidos"), reader.Item("dni"), reader.Item("telefono"), reader.Item("correo"), reader.Item("direccion"))
+
+    'End While
+
+
+    'End Sub
 
     Private Sub txtCodCliente_TextChanged(sender As Object, e As EventArgs) Handles txtCodCliente.TextChanged
         If txtCodCliente.Text <> "" Then

@@ -52,6 +52,8 @@ Partial Class FrmClientes
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.DataGridClientes = New System.Windows.Forms.DataGridView()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dtpfecha = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -94,6 +96,8 @@ Partial Class FrmClientes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.dtpfecha)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtdireccion)
         Me.GroupBox1.Controls.Add(Me.Txtdnicliente)
         Me.GroupBox1.Controls.Add(Me.Label12)
@@ -116,7 +120,7 @@ Partial Class FrmClientes
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(1092, 196)
+        Me.GroupBox1.Size = New System.Drawing.Size(1092, 238)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion Principal."
@@ -288,7 +292,7 @@ Partial Class FrmClientes
         Me.Panel3.Controls.Add(Me.btncancelar)
         Me.Panel3.Controls.Add(Me.btnactualizar)
         Me.Panel3.Controls.Add(Me.btnguardar)
-        Me.Panel3.Location = New System.Drawing.Point(59, 622)
+        Me.Panel3.Location = New System.Drawing.Point(59, 660)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1092, 70)
@@ -357,7 +361,7 @@ Partial Class FrmClientes
         'DataGridClientes
         '
         Me.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridClientes.Location = New System.Drawing.Point(59, 336)
+        Me.DataGridClientes.Location = New System.Drawing.Point(59, 376)
         Me.DataGridClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridClientes.Name = "DataGridClientes"
         Me.DataGridClientes.RowHeadersWidth = 51
@@ -371,11 +375,29 @@ Partial Class FrmClientes
         Me.ToolTip1.InitialDelay = 100
         Me.ToolTip1.ReshowDelay = 100
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(16, 190)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(139, 16)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Fecha de Registro:"
+        '
+        'dtpfecha
+        '
+        Me.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpfecha.Location = New System.Drawing.Point(170, 184)
+        Me.dtpfecha.Name = "dtpfecha"
+        Me.dtpfecha.Size = New System.Drawing.Size(185, 22)
+        Me.dtpfecha.TabIndex = 21
+        Me.ToolTip1.SetToolTip(Me.dtpfecha, "Seleccione la fecha de registro.")
+        '
         'FrmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1211, 732)
+        Me.ClientSize = New System.Drawing.Size(1211, 757)
         Me.Controls.Add(Me.DataGridClientes)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.GroupBox1)
@@ -422,4 +444,6 @@ Partial Class FrmClientes
     Friend WithEvents DataGridClientes As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents dtpfecha As DateTimePicker
+    Friend WithEvents Label6 As Label
 End Class

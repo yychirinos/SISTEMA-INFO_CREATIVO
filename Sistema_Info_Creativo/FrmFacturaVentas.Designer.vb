@@ -31,6 +31,7 @@ Partial Class FrmFacturaVentas
         Me.txtidcliente = New System.Windows.Forms.TextBox()
         Me.txtdescuento = New System.Windows.Forms.TextBox()
         Me.Cmbagregar = New System.Windows.Forms.GroupBox()
+        Me.txtidusuario = New System.Windows.Forms.TextBox()
         Me.cmbproducto = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dtfecha = New System.Windows.Forms.DateTimePicker()
@@ -48,7 +49,6 @@ Partial Class FrmFacturaVentas
         Me.dgvFactura = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnActualizar = New System.Windows.Forms.Button()
-        Me.txtidusuario = New System.Windows.Forms.TextBox()
         Me.Cmbagregar.SuspendLayout()
         CType(Me.dgvFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -57,67 +57,75 @@ Partial Class FrmFacturaVentas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 28)
+        Me.Label1.Location = New System.Drawing.Point(8, 34)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Num Factura"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 98)
+        Me.Label2.Location = New System.Drawing.Point(8, 121)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
+        Me.Label2.Size = New System.Drawing.Size(59, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "IdCliente"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 168)
+        Me.Label3.Location = New System.Drawing.Point(8, 207)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(45, 16)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Fecha"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 88)
+        Me.Label4.Location = New System.Drawing.Point(19, 108)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 13)
+        Me.Label4.Size = New System.Drawing.Size(72, 16)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Descuento"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 135)
+        Me.Label8.Location = New System.Drawing.Point(8, 166)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(52, 13)
+        Me.Label8.Size = New System.Drawing.Size(65, 16)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "IdUsuario"
         '
         'txtnumfactura
         '
-        Me.txtnumfactura.Location = New System.Drawing.Point(91, 28)
+        Me.txtnumfactura.Location = New System.Drawing.Point(121, 34)
+        Me.txtnumfactura.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtnumfactura.Name = "txtnumfactura"
-        Me.txtnumfactura.Size = New System.Drawing.Size(100, 20)
+        Me.txtnumfactura.Size = New System.Drawing.Size(132, 22)
         Me.txtnumfactura.TabIndex = 8
         '
         'txtidcliente
         '
-        Me.txtidcliente.Location = New System.Drawing.Point(91, 94)
+        Me.txtidcliente.Location = New System.Drawing.Point(121, 116)
+        Me.txtidcliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtidcliente.Name = "txtidcliente"
-        Me.txtidcliente.Size = New System.Drawing.Size(100, 20)
+        Me.txtidcliente.Size = New System.Drawing.Size(132, 22)
         Me.txtidcliente.TabIndex = 9
         '
         'txtdescuento
         '
-        Me.txtdescuento.Location = New System.Drawing.Point(103, 81)
+        Me.txtdescuento.Location = New System.Drawing.Point(137, 100)
+        Me.txtdescuento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtdescuento.Name = "txtdescuento"
-        Me.txtdescuento.Size = New System.Drawing.Size(100, 20)
+        Me.txtdescuento.Size = New System.Drawing.Size(132, 22)
         Me.txtdescuento.TabIndex = 12
         '
         'Cmbagregar
@@ -132,51 +140,66 @@ Partial Class FrmFacturaVentas
         Me.Cmbagregar.Controls.Add(Me.txtidcliente)
         Me.Cmbagregar.Controls.Add(Me.Label3)
         Me.Cmbagregar.Controls.Add(Me.Label8)
-        Me.Cmbagregar.Location = New System.Drawing.Point(21, 29)
+        Me.Cmbagregar.Location = New System.Drawing.Point(28, 36)
+        Me.Cmbagregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Cmbagregar.Name = "Cmbagregar"
-        Me.Cmbagregar.Size = New System.Drawing.Size(352, 217)
+        Me.Cmbagregar.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Cmbagregar.Size = New System.Drawing.Size(469, 267)
         Me.Cmbagregar.TabIndex = 18
         Me.Cmbagregar.TabStop = False
         Me.Cmbagregar.Text = "Datos"
         '
+        'txtidusuario
+        '
+        Me.txtidusuario.Location = New System.Drawing.Point(121, 155)
+        Me.txtidusuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtidusuario.Name = "txtidusuario"
+        Me.txtidusuario.Size = New System.Drawing.Size(132, 22)
+        Me.txtidusuario.TabIndex = 15
+        '
         'cmbproducto
         '
         Me.cmbproducto.FormattingEnabled = True
-        Me.cmbproducto.Location = New System.Drawing.Point(91, 61)
+        Me.cmbproducto.Location = New System.Drawing.Point(121, 75)
+        Me.cmbproducto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbproducto.Name = "cmbproducto"
-        Me.cmbproducto.Size = New System.Drawing.Size(102, 21)
+        Me.cmbproducto.Size = New System.Drawing.Size(135, 24)
         Me.cmbproducto.TabIndex = 14
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 64)
+        Me.Label5.Location = New System.Drawing.Point(11, 79)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 13)
+        Me.Label5.Size = New System.Drawing.Size(61, 16)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Producto"
         '
         'dtfecha
         '
-        Me.dtfecha.Location = New System.Drawing.Point(89, 168)
+        Me.dtfecha.Location = New System.Drawing.Point(119, 207)
+        Me.dtfecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtfecha.Name = "dtfecha"
-        Me.dtfecha.Size = New System.Drawing.Size(148, 20)
+        Me.dtfecha.Size = New System.Drawing.Size(196, 22)
         Me.dtfecha.TabIndex = 12
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(231, 146)
+        Me.btnagregar.Location = New System.Drawing.Point(308, 180)
+        Me.btnagregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(57, 23)
+        Me.btnagregar.Size = New System.Drawing.Size(76, 28)
         Me.btnagregar.TabIndex = 19
         Me.btnagregar.Text = "Agregar"
         Me.btnagregar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(240, 259)
+        Me.btnEliminar.Location = New System.Drawing.Point(320, 319)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(100, 28)
         Me.btnEliminar.TabIndex = 20
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -184,40 +207,45 @@ Partial Class FrmFacturaVentas
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(14, 25)
+        Me.Label9.Location = New System.Drawing.Point(19, 31)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(37, 13)
+        Me.Label9.Size = New System.Drawing.Size(46, 16)
         Me.Label9.TabIndex = 21
         Me.Label9.Text = "Precio"
         '
         'txtprecio
         '
-        Me.txtprecio.Location = New System.Drawing.Point(103, 29)
+        Me.txtprecio.Location = New System.Drawing.Point(137, 36)
+        Me.txtprecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(100, 20)
+        Me.txtprecio.Size = New System.Drawing.Size(132, 22)
         Me.txtprecio.TabIndex = 22
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(14, 55)
+        Me.Label6.Location = New System.Drawing.Point(19, 68)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(61, 16)
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "Cantidad"
         '
         'txtcantidad
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(103, 55)
+        Me.txtcantidad.Location = New System.Drawing.Point(137, 68)
+        Me.txtcantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtcantidad.Size = New System.Drawing.Size(132, 22)
         Me.txtcantidad.TabIndex = 24
         '
         'btnCalcular
         '
-        Me.btnCalcular.Location = New System.Drawing.Point(17, 146)
+        Me.btnCalcular.Location = New System.Drawing.Point(23, 180)
+        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(75, 23)
+        Me.btnCalcular.Size = New System.Drawing.Size(100, 28)
         Me.btnCalcular.TabIndex = 25
         Me.btnCalcular.Text = "Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = True
@@ -225,41 +253,47 @@ Partial Class FrmFacturaVentas
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(14, 120)
+        Me.Label7.Location = New System.Drawing.Point(19, 148)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(31, 13)
+        Me.Label7.Size = New System.Drawing.Size(38, 16)
         Me.Label7.TabIndex = 26
         Me.Label7.Text = "Total"
         '
         'txttotal
         '
-        Me.txttotal.Location = New System.Drawing.Point(103, 113)
+        Me.txttotal.Location = New System.Drawing.Point(137, 139)
+        Me.txttotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txttotal.Name = "txttotal"
-        Me.txttotal.Size = New System.Drawing.Size(100, 20)
+        Me.txttotal.Size = New System.Drawing.Size(132, 22)
         Me.txttotal.TabIndex = 27
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(38, 259)
+        Me.Label10.Location = New System.Drawing.Point(51, 319)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 13)
+        Me.Label10.Size = New System.Drawing.Size(106, 16)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "Buscar Producto"
         '
         'txtbuscarpro
         '
-        Me.txtbuscarpro.Location = New System.Drawing.Point(41, 287)
+        Me.txtbuscarpro.Location = New System.Drawing.Point(55, 353)
+        Me.txtbuscarpro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtbuscarpro.Name = "txtbuscarpro"
-        Me.txtbuscarpro.Size = New System.Drawing.Size(132, 20)
+        Me.txtbuscarpro.Size = New System.Drawing.Size(175, 22)
         Me.txtbuscarpro.TabIndex = 28
         '
         'dgvFactura
         '
         Me.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFactura.Location = New System.Drawing.Point(-1, 328)
+        Me.dgvFactura.Location = New System.Drawing.Point(-1, 404)
+        Me.dgvFactura.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvFactura.Name = "dgvFactura"
-        Me.dgvFactura.Size = New System.Drawing.Size(898, 160)
+        Me.dgvFactura.RowHeadersWidth = 51
+        Me.dgvFactura.Size = New System.Drawing.Size(1197, 197)
         Me.dgvFactura.TabIndex = 30
         '
         'GroupBox1
@@ -274,34 +308,30 @@ Partial Class FrmFacturaVentas
         Me.GroupBox1.Controls.Add(Me.txtprecio)
         Me.GroupBox1.Controls.Add(Me.txtcantidad)
         Me.GroupBox1.Controls.Add(Me.txtdescuento)
-        Me.GroupBox1.Location = New System.Drawing.Point(423, 35)
+        Me.GroupBox1.Location = New System.Drawing.Point(564, 43)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(334, 175)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(445, 215)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Facturacion"
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(335, 259)
+        Me.btnActualizar.Location = New System.Drawing.Point(447, 319)
+        Me.btnActualizar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.btnActualizar.Size = New System.Drawing.Size(100, 28)
         Me.btnActualizar.TabIndex = 32
         Me.btnActualizar.Text = "Actualizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
         '
-        'txtidusuario
-        '
-        Me.txtidusuario.Location = New System.Drawing.Point(91, 126)
-        Me.txtidusuario.Name = "txtidusuario"
-        Me.txtidusuario.Size = New System.Drawing.Size(100, 20)
-        Me.txtidusuario.TabIndex = 15
-        '
         'FrmFacturaVentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(898, 488)
+        Me.ClientSize = New System.Drawing.Size(1197, 622)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgvFactura)
@@ -309,6 +339,7 @@ Partial Class FrmFacturaVentas
         Me.Controls.Add(Me.txtbuscarpro)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.Cmbagregar)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmFacturaVentas"
         Me.Text = "FrmFacturaVentas"
         Me.Cmbagregar.ResumeLayout(False)
