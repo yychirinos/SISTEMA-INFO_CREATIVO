@@ -22,8 +22,10 @@ Partial Class FrmUSUARIOS
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -45,7 +47,7 @@ Partial Class FrmUSUARIOS
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.actualizar = New System.Windows.Forms.Button()
         Me.guardar = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -72,6 +74,17 @@ Partial Class FrmUSUARIOS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(732, 60)
         Me.Panel1.TabIndex = 5
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(128, 10)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(454, 45)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "REGISTRAR USUARIO"
         '
         'PictureBox1
         '
@@ -157,6 +170,7 @@ Partial Class FrmUSUARIOS
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Buscar Usuario.")
         '
         'Ckactivo
         '
@@ -233,6 +247,7 @@ Partial Class FrmUSUARIOS
         Me.eliminar.Size = New System.Drawing.Size(104, 39)
         Me.eliminar.TabIndex = 5
         Me.eliminar.Text = "Eliminar"
+        Me.ToolTip1.SetToolTip(Me.eliminar, "Eliminar Usuario.")
         Me.eliminar.UseVisualStyleBackColor = True
         '
         'btnsalir
@@ -243,6 +258,7 @@ Partial Class FrmUSUARIOS
         Me.btnsalir.Size = New System.Drawing.Size(87, 39)
         Me.btnsalir.TabIndex = 4
         Me.btnsalir.Text = "Salir"
+        Me.ToolTip1.SetToolTip(Me.btnsalir, "Volver al Menu Principal.")
         Me.btnsalir.UseVisualStyleBackColor = True
         '
         'btncancelar
@@ -253,6 +269,7 @@ Partial Class FrmUSUARIOS
         Me.btncancelar.Size = New System.Drawing.Size(100, 39)
         Me.btncancelar.TabIndex = 3
         Me.btncancelar.Text = "Cancelar"
+        Me.ToolTip1.SetToolTip(Me.btncancelar, "Cancelar Registro.")
         Me.btncancelar.UseVisualStyleBackColor = True
         '
         'actualizar
@@ -263,6 +280,7 @@ Partial Class FrmUSUARIOS
         Me.actualizar.Size = New System.Drawing.Size(113, 39)
         Me.actualizar.TabIndex = 1
         Me.actualizar.Text = "Actualizar"
+        Me.ToolTip1.SetToolTip(Me.actualizar, "Actualizar Informacion")
         Me.actualizar.UseVisualStyleBackColor = True
         '
         'guardar
@@ -273,18 +291,14 @@ Partial Class FrmUSUARIOS
         Me.guardar.Size = New System.Drawing.Size(89, 39)
         Me.guardar.TabIndex = 0
         Me.guardar.Text = "Guardar"
+        Me.ToolTip1.SetToolTip(Me.guardar, "Guardar Usuario.")
         Me.guardar.UseVisualStyleBackColor = True
         '
-        'Label6
+        'ToolTip1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(128, 10)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(454, 45)
-        Me.Label6.TabIndex = 27
-        Me.Label6.Text = "REGISTRAR USUARIO"
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 100
+        Me.ToolTip1.ReshowDelay = 100
         '
         'FrmUSUARIOS
         '
@@ -332,4 +346,5 @@ Partial Class FrmUSUARIOS
     Friend WithEvents actualizar As Button
     Friend WithEvents guardar As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
