@@ -426,6 +426,15 @@
   <ItemGroup>
     <None Include="Resources\20230710_230701_0000.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO INFO CREATIVE6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO INFO CREATIVE7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOTIPO INFO CREATIVE8.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -25,7 +25,6 @@ Partial Class FrmUSUARIOS
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtcorreo = New System.Windows.Forms.TextBox()
@@ -46,6 +45,7 @@ Partial Class FrmUSUARIOS
         Me.btncancelar = New System.Windows.Forms.Button()
         Me.actualizar = New System.Windows.Forms.Button()
         Me.guardar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -64,8 +64,8 @@ Partial Class FrmUSUARIOS
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Location = New System.Drawing.Point(0, -5)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -82,17 +82,6 @@ Partial Class FrmUSUARIOS
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(161, 14)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(385, 38)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "REGISTRAR USUARIO"
         '
         'Label10
         '
@@ -286,6 +275,17 @@ Partial Class FrmUSUARIOS
         Me.guardar.Text = "Guardar"
         Me.guardar.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(128, 10)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(454, 45)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "REGISTRAR USUARIO"
+        '
         'FrmUSUARIOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -311,7 +311,6 @@ Partial Class FrmUSUARIOS
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox2 As PictureBox
@@ -332,4 +331,5 @@ Partial Class FrmUSUARIOS
     Friend WithEvents btncancelar As Button
     Friend WithEvents actualizar As Button
     Friend WithEvents guardar As Button
+    Friend WithEvents Label6 As Label
 End Class

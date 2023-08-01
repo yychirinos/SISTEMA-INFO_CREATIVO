@@ -22,6 +22,7 @@ Partial Class FrmClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -50,6 +51,7 @@ Partial Class FrmClientes
         Me.btnactualizar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.DataGridClientes = New System.Windows.Forms.DataGridView()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -127,6 +129,7 @@ Partial Class FrmClientes
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.Size = New System.Drawing.Size(493, 62)
         Me.txtdireccion.TabIndex = 19
+        Me.ToolTip1.SetToolTip(Me.txtdireccion, "Ingrese la direccion del cliente.")
         '
         'Txtdnicliente
         '
@@ -135,6 +138,7 @@ Partial Class FrmClientes
         Me.Txtdnicliente.Name = "Txtdnicliente"
         Me.Txtdnicliente.Size = New System.Drawing.Size(200, 22)
         Me.Txtdnicliente.TabIndex = 14
+        Me.ToolTip1.SetToolTip(Me.Txtdnicliente, "Ingrese un DNI (13 digitos, sin guiones ni espacios)")
         '
         'Label12
         '
@@ -152,6 +156,7 @@ Partial Class FrmClientes
         Me.txtcorreo.Name = "txtcorreo"
         Me.txtcorreo.Size = New System.Drawing.Size(200, 22)
         Me.txtcorreo.TabIndex = 18
+        Me.ToolTip1.SetToolTip(Me.txtcorreo, "Ingrese un correo.")
         '
         'btnbuscar
         '
@@ -163,6 +168,7 @@ Partial Class FrmClientes
         Me.btnbuscar.Name = "btnbuscar"
         Me.btnbuscar.Size = New System.Drawing.Size(29, 26)
         Me.btnbuscar.TabIndex = 12
+        Me.ToolTip1.SetToolTip(Me.btnbuscar, "Buscar Cliente (Llenar informacion del cliente)")
         Me.btnbuscar.UseVisualStyleBackColor = False
         '
         'txtapellidocliente
@@ -172,6 +178,7 @@ Partial Class FrmClientes
         Me.txtapellidocliente.Name = "txtapellidocliente"
         Me.txtapellidocliente.Size = New System.Drawing.Size(200, 22)
         Me.txtapellidocliente.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.txtapellidocliente, "Ingrese los apellidos del cliente.")
         '
         'Label3
         '
@@ -189,6 +196,7 @@ Partial Class FrmClientes
         Me.txtNombreCliente.Name = "txtNombreCliente"
         Me.txtNombreCliente.Size = New System.Drawing.Size(200, 22)
         Me.txtNombreCliente.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.txtNombreCliente, "Ingrese el nombre del cliente.")
         '
         'Txttelefono
         '
@@ -197,6 +205,7 @@ Partial Class FrmClientes
         Me.Txttelefono.Name = "Txttelefono"
         Me.Txttelefono.Size = New System.Drawing.Size(200, 22)
         Me.Txttelefono.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.Txttelefono, "Ingrese un numero telefonico de 8 digitos.")
         '
         'cmbtipocliente
         '
@@ -207,6 +216,7 @@ Partial Class FrmClientes
         Me.cmbtipocliente.Name = "cmbtipocliente"
         Me.cmbtipocliente.Size = New System.Drawing.Size(200, 24)
         Me.cmbtipocliente.TabIndex = 15
+        Me.ToolTip1.SetToolTip(Me.cmbtipocliente, "Seleccione el tipo de cliente.")
         '
         'Label8
         '
@@ -224,6 +234,7 @@ Partial Class FrmClientes
         Me.txtCodCliente.Name = "txtCodCliente"
         Me.txtCodCliente.Size = New System.Drawing.Size(115, 22)
         Me.txtCodCliente.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.txtCodCliente, "Ingrese un codigo de cliente.")
         '
         'Label5
         '
@@ -292,6 +303,7 @@ Partial Class FrmClientes
         Me.btneliminar.Size = New System.Drawing.Size(117, 39)
         Me.btneliminar.TabIndex = 5
         Me.btneliminar.Text = "Eliminar"
+        Me.ToolTip1.SetToolTip(Me.btneliminar, "Eliminar Cliente.")
         Me.btneliminar.UseVisualStyleBackColor = True
         '
         'btnsalir
@@ -303,6 +315,7 @@ Partial Class FrmClientes
         Me.btnsalir.Size = New System.Drawing.Size(99, 39)
         Me.btnsalir.TabIndex = 4
         Me.btnsalir.Text = "Salir"
+        Me.ToolTip1.SetToolTip(Me.btnsalir, "Volver al Menu Principal.")
         Me.btnsalir.UseVisualStyleBackColor = True
         '
         'btncancelar
@@ -314,6 +327,7 @@ Partial Class FrmClientes
         Me.btncancelar.Size = New System.Drawing.Size(111, 39)
         Me.btncancelar.TabIndex = 3
         Me.btncancelar.Text = "Cancelar"
+        Me.ToolTip1.SetToolTip(Me.btncancelar, "Cancelar Registro.")
         Me.btncancelar.UseVisualStyleBackColor = True
         '
         'btnactualizar
@@ -325,6 +339,7 @@ Partial Class FrmClientes
         Me.btnactualizar.Size = New System.Drawing.Size(131, 39)
         Me.btnactualizar.TabIndex = 1
         Me.btnactualizar.Text = "Actualizar"
+        Me.ToolTip1.SetToolTip(Me.btnactualizar, "Actualizar informacion del cliente.")
         Me.btnactualizar.UseVisualStyleBackColor = True
         '
         'btnguardar
@@ -336,6 +351,7 @@ Partial Class FrmClientes
         Me.btnguardar.Size = New System.Drawing.Size(107, 39)
         Me.btnguardar.TabIndex = 0
         Me.btnguardar.Text = "Guardar"
+        Me.ToolTip1.SetToolTip(Me.btnguardar, "Guardar Cliente.")
         Me.btnguardar.UseVisualStyleBackColor = True
         '
         'DataGridClientes
@@ -348,6 +364,12 @@ Partial Class FrmClientes
         Me.DataGridClientes.RowTemplate.Height = 24
         Me.DataGridClientes.Size = New System.Drawing.Size(1092, 250)
         Me.DataGridClientes.TabIndex = 17
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.AutoPopDelay = 5000
+        Me.ToolTip1.InitialDelay = 100
+        Me.ToolTip1.ReshowDelay = 100
         '
         'FrmClientes
         '
@@ -399,4 +421,5 @@ Partial Class FrmClientes
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents DataGridClientes As DataGridView
     Friend WithEvents Label4 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

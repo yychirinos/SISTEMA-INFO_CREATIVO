@@ -184,11 +184,23 @@ Public Class FrmClientes
         DataGridClientes.AllowUserToAddRows = False
     End Sub
 
-    Private Sub DataGridClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridClientes.CellContentClick
+    Sub LlenarGridClientes()
+        DataGridClientes.AllowUserToAddRows = False
 
-    End Sub
+        Dim con As New SqlClient.SqlConnection(My.Settings.INFO_CREATIVO)
+        con.Open()
+        Dim reader As SqlClient.SqlDataReader
+        Dim cmd As New SqlClient.SqlCommand("SELECT codcliente, tipocliente, nombres, apellidos, dni, telefono, correo, direccion FROM clientes", con)
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+        reader = cmd.ExecuteReader
+
+
+
+        While reader.Read
+            DataGridClientes.Rows.Add(reader.Item("codcliente"), reader.Item("tipocliente"), reader.Item("nombres"), reader.Item("apellidos"), reader.Item("dni"), reader.Item("telefono"), reader.Item("correo"), reader.Item("direccion"))
+
+        End While
+
 
     End Sub
 
